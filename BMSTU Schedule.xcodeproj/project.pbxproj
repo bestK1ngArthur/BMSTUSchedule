@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68C377781C3406B3007DD412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C377771C3406B3007DD412 /* main.m */; };
+		68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777A1C3406B3007DD412 /* AppDelegate.m */; };
+		68C3777E1C3406B3007DD412 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777D1C3406B3007DD412 /* FirstViewController.m */; };
+		68C377811C3406B3007DD412 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C377801C3406B3007DD412 /* SecondViewController.m */; };
+		68C377841C3406B3007DD412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C377821C3406B3007DD412 /* Main.storyboard */; };
+		68C377861C3406B3007DD412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C377851C3406B3007DD412 /* Assets.xcassets */; };
+		68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C377871C3406B3007DD412 /* LaunchScreen.storyboard */; };
+		68C377941C3406B3007DD412 /* BMSTU_ScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C377931C3406B3007DD412 /* BMSTU_ScheduleTests.m */; };
+		68C3779F1C3406B3007DD412 /* BMSTU_ScheduleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3779E1C3406B3007DD412 /* BMSTU_ScheduleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68C377901C3406B3007DD412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68C3776B1C3406B3007DD412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68C377721C3406B3007DD412;
+			remoteInfo = "BMSTU Schedule";
+		};
+		68C3779B1C3406B3007DD412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68C3776B1C3406B3007DD412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68C377721C3406B3007DD412;
+			remoteInfo = "BMSTU Schedule";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68C377731C3406B3007DD412 /* BMSTU Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMSTU Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C377771C3406B3007DD412 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68C377791C3406B3007DD412 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68C3777A1C3406B3007DD412 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68C3777C1C3406B3007DD412 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		68C3777D1C3406B3007DD412 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		68C3777F1C3406B3007DD412 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		68C377801C3406B3007DD412 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		68C377831C3406B3007DD412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68C377851C3406B3007DD412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68C377881C3406B3007DD412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68C3778A1C3406B3007DD412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C3778F1C3406B3007DD412 /* BMSTU ScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSTU ScheduleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C377931C3406B3007DD412 /* BMSTU_ScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMSTU_ScheduleTests.m; sourceTree = "<group>"; };
+		68C377951C3406B3007DD412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C3779A1C3406B3007DD412 /* BMSTU ScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSTU ScheduleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C3779E1C3406B3007DD412 /* BMSTU_ScheduleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMSTU_ScheduleUITests.m; sourceTree = "<group>"; };
+		68C377A01C3406B3007DD412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68C377701C3406B3007DD412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C3778C1C3406B3007DD412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C377971C3406B3007DD412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68C3776A1C3406B3007DD412 = {
+			isa = PBXGroup;
+			children = (
+				68C377751C3406B3007DD412 /* BMSTU Schedule */,
+				68C377921C3406B3007DD412 /* BMSTU ScheduleTests */,
+				68C3779D1C3406B3007DD412 /* BMSTU ScheduleUITests */,
+				68C377741C3406B3007DD412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68C377741C3406B3007DD412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68C377731C3406B3007DD412 /* BMSTU Schedule.app */,
+				68C3778F1C3406B3007DD412 /* BMSTU ScheduleTests.xctest */,
+				68C3779A1C3406B3007DD412 /* BMSTU ScheduleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68C377751C3406B3007DD412 /* BMSTU Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				68C377791C3406B3007DD412 /* AppDelegate.h */,
+				68C3777A1C3406B3007DD412 /* AppDelegate.m */,
+				68C3777C1C3406B3007DD412 /* FirstViewController.h */,
+				68C3777D1C3406B3007DD412 /* FirstViewController.m */,
+				68C3777F1C3406B3007DD412 /* SecondViewController.h */,
+				68C377801C3406B3007DD412 /* SecondViewController.m */,
+				68C377821C3406B3007DD412 /* Main.storyboard */,
+				68C377851C3406B3007DD412 /* Assets.xcassets */,
+				68C377871C3406B3007DD412 /* LaunchScreen.storyboard */,
+				68C3778A1C3406B3007DD412 /* Info.plist */,
+				68C377761C3406B3007DD412 /* Supporting Files */,
+			);
+			path = "BMSTU Schedule";
+			sourceTree = "<group>";
+		};
+		68C377761C3406B3007DD412 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68C377771C3406B3007DD412 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68C377921C3406B3007DD412 /* BMSTU ScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				68C377931C3406B3007DD412 /* BMSTU_ScheduleTests.m */,
+				68C377951C3406B3007DD412 /* Info.plist */,
+			);
+			path = "BMSTU ScheduleTests";
+			sourceTree = "<group>";
+		};
+		68C3779D1C3406B3007DD412 /* BMSTU ScheduleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				68C3779E1C3406B3007DD412 /* BMSTU_ScheduleUITests.m */,
+				68C377A01C3406B3007DD412 /* Info.plist */,
+			);
+			path = "BMSTU ScheduleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68C377721C3406B3007DD412 /* BMSTU Schedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C377A31C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU Schedule" */;
+			buildPhases = (
+				68C3776F1C3406B3007DD412 /* Sources */,
+				68C377701C3406B3007DD412 /* Frameworks */,
+				68C377711C3406B3007DD412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BMSTU Schedule";
+			productName = "BMSTU Schedule";
+			productReference = 68C377731C3406B3007DD412 /* BMSTU Schedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68C3778E1C3406B3007DD412 /* BMSTU ScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C377A61C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleTests" */;
+			buildPhases = (
+				68C3778B1C3406B3007DD412 /* Sources */,
+				68C3778C1C3406B3007DD412 /* Frameworks */,
+				68C3778D1C3406B3007DD412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68C377911C3406B3007DD412 /* PBXTargetDependency */,
+			);
+			name = "BMSTU ScheduleTests";
+			productName = "BMSTU ScheduleTests";
+			productReference = 68C3778F1C3406B3007DD412 /* BMSTU ScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		68C377991C3406B3007DD412 /* BMSTU ScheduleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C377A91C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleUITests" */;
+			buildPhases = (
+				68C377961C3406B3007DD412 /* Sources */,
+				68C377971C3406B3007DD412 /* Frameworks */,
+				68C377981C3406B3007DD412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68C3779C1C3406B3007DD412 /* PBXTargetDependency */,
+			);
+			name = "BMSTU ScheduleUITests";
+			productName = "BMSTU ScheduleUITests";
+			productReference = 68C3779A1C3406B3007DD412 /* BMSTU ScheduleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68C3776B1C3406B3007DD412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Artem Belkov";
+				TargetAttributes = {
+					68C377721C3406B3007DD412 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CT884K7983;
+					};
+					68C3778E1C3406B3007DD412 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CT884K7983;
+						TestTargetID = 68C377721C3406B3007DD412;
+					};
+					68C377991C3406B3007DD412 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CT884K7983;
+						TestTargetID = 68C377721C3406B3007DD412;
+					};
+				};
+			};
+			buildConfigurationList = 68C3776E1C3406B3007DD412 /* Build configuration list for PBXProject "BMSTU Schedule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68C3776A1C3406B3007DD412;
+			productRefGroup = 68C377741C3406B3007DD412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68C377721C3406B3007DD412 /* BMSTU Schedule */,
+				68C3778E1C3406B3007DD412 /* BMSTU ScheduleTests */,
+				68C377991C3406B3007DD412 /* BMSTU ScheduleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68C377711C3406B3007DD412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */,
+				68C377861C3406B3007DD412 /* Assets.xcassets in Resources */,
+				68C377841C3406B3007DD412 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C3778D1C3406B3007DD412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C377981C3406B3007DD412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68C3776F1C3406B3007DD412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C377811C3406B3007DD412 /* SecondViewController.m in Sources */,
+				68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */,
+				68C3777E1C3406B3007DD412 /* FirstViewController.m in Sources */,
+				68C377781C3406B3007DD412 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C3778B1C3406B3007DD412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C377941C3406B3007DD412 /* BMSTU_ScheduleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C377961C3406B3007DD412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C3779F1C3406B3007DD412 /* BMSTU_ScheduleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68C377911C3406B3007DD412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68C377721C3406B3007DD412 /* BMSTU Schedule */;
+			targetProxy = 68C377901C3406B3007DD412 /* PBXContainerItemProxy */;
+		};
+		68C3779C1C3406B3007DD412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68C377721C3406B3007DD412 /* BMSTU Schedule */;
+			targetProxy = 68C3779B1C3406B3007DD412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68C377821C3406B3007DD412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C377831C3406B3007DD412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68C377871C3406B3007DD412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C377881C3406B3007DD412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68C377A11C3406B3007DD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68C377A21C3406B3007DD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68C377A41C3406B3007DD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BMSTU Schedule/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-Schedule";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68C377A51C3406B3007DD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BMSTU Schedule/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-Schedule";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68C377A71C3406B3007DD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BMSTU ScheduleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-ScheduleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMSTU Schedule.app/BMSTU Schedule";
+			};
+			name = Debug;
+		};
+		68C377A81C3406B3007DD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BMSTU ScheduleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-ScheduleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMSTU Schedule.app/BMSTU Schedule";
+			};
+			name = Release;
+		};
+		68C377AA1C3406B3007DD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BMSTU ScheduleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-ScheduleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BMSTU Schedule";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		68C377AB1C3406B3007DD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BMSTU ScheduleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artembelkov.BMSTU-ScheduleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BMSTU Schedule";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68C3776E1C3406B3007DD412 /* Build configuration list for PBXProject "BMSTU Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C377A11C3406B3007DD412 /* Debug */,
+				68C377A21C3406B3007DD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68C377A31C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C377A41C3406B3007DD412 /* Debug */,
+				68C377A51C3406B3007DD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68C377A61C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C377A71C3406B3007DD412 /* Debug */,
+				68C377A81C3406B3007DD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68C377A91C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C377AA1C3406B3007DD412 /* Debug */,
+				68C377AB1C3406B3007DD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68C3776B1C3406B3007DD412 /* Project object */;
+}
