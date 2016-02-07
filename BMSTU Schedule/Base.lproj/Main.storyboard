@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today Schedule-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -17,26 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-Yj-cIk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Today View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
                                 <rect key="frame" x="208" y="279" width="184" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by TodayViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="198" y="329" width="205" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Ahr-Yj-cIk" secondAttribute="bottom" id="6zf-1S-lxs"/>
+                            <constraint firstItem="Ahr-Yj-cIk" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="OJi-Jg-mVg"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="Ahr-Yj-cIk" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="oHc-x8-Cje"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ahr-Yj-cIk" secondAttribute="trailing" constant="-20" id="yeW-GD-T9J"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today Filled" id="acW-dT-cKf"/>
@@ -44,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="-1107"/>
+            <point key="canvasLocation" x="1490" y="-369"/>
         </scene>
         <!--Item-->
         <scene sceneID="HNu-vM-fGJ">
@@ -54,6 +63,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iyv-Xv-riq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30196079609999998" green="0.7019608021" blue="0.8392156959" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Th0-9G-baP"/>
@@ -61,12 +74,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCO-UM-RQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-1107"/>
+            <point key="canvasLocation" x="758" y="-364"/>
         </scene>
         <!--Week Schedule-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="FirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -75,51 +88,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Week View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="211" y="279" width="179" height="42"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="InU-X3-LQr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by WeekViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="200" y="329" width="202" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="QMW-qe-lDG"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="dXc-SZ-8wf"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="InU-X3-LQr" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="8Ae-M9-eZx"/>
+                            <constraint firstItem="InU-X3-LQr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="Ftg-tl-ad7"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="InU-X3-LQr" secondAttribute="bottom" id="Hm3-Yk-X5y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="InU-X3-LQr" secondAttribute="trailing" constant="-20" id="Zjf-ax-NLO"/>
+                            <constraint firstItem="InU-X3-LQr" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="dlt-En-7Zf"/>
+                            <constraint firstItem="InU-X3-LQr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="xUn-Fn-7A7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week Filled" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Week Schedule" id="MPQ-DU-KzL"/>
+                    <connections>
+                        <outlet property="tableView" destination="InU-X3-LQr" id="hga-Tp-EFw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="-380"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="qVe-sY-bRg">
-            <objects>
-                <navigationController id="c3m-hH-t5P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fqb-4p-B5n"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LH7-1p-vZx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="HBa-t3-VC3" kind="relationship" relationship="rootViewController" id="TgN-iq-GGJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yfM-gA-4Uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="370"/>
+            <point key="canvasLocation" x="1490" y="363"/>
         </scene>
         <!--Item-->
         <scene sceneID="7Jn-ti-g06">
@@ -129,6 +125,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kG1-qZ-1A2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30196079609999998" green="0.7019608021" blue="0.8392156959" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="eeu-nL-emS" kind="relationship" relationship="rootViewController" id="qKl-v0-0AD"/>
@@ -146,6 +146,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wE-0b-R5T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30196079609999998" green="0.7019608021" blue="0.8392156959" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Uya-c3-phD"/>
@@ -153,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zp-vW-QUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-380"/>
+            <point key="canvasLocation" x="758" y="363"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -169,7 +173,6 @@
                     <connections>
                         <segue destination="EA0-fh-ybo" kind="relationship" relationship="viewControllers" id="5Rd-yF-Oe1"/>
                         <segue destination="2u9-vM-Bcf" kind="relationship" relationship="viewControllers" id="Odh-e8-qB2"/>
-                        <segue destination="c3m-hH-t5P" kind="relationship" relationship="viewControllers" id="g0s-Qz-suJ"/>
                         <segue destination="cfx-DL-HEZ" kind="relationship" relationship="viewControllers" id="Tw8-q7-oC1"/>
                     </connections>
                 </tabBarController>
@@ -177,51 +180,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Term Schedule-->
-        <scene sceneID="3dR-Xj-ECo">
-            <objects>
-                <viewController id="HBa-t3-VC3" customClass="SecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fno-gH-Lrh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Un1-Lc-iDF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K2n-nd-Ic5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Term View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OPc-d8-r4s">
-                                <rect key="frame" x="216" y="279" width="168" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by TermViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFg-XM-89z">
-                                <rect key="frame" x="201" y="329" width="199" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pFg-XM-89z" firstAttribute="centerX" secondItem="OPc-d8-r4s" secondAttribute="centerX" id="CFz-U7-tIC"/>
-                            <constraint firstAttribute="centerX" secondItem="OPc-d8-r4s" secondAttribute="centerX" id="J18-lf-baa"/>
-                            <constraint firstItem="pFg-XM-89z" firstAttribute="top" secondItem="OPc-d8-r4s" secondAttribute="bottom" constant="8" symbolic="YES" id="d0q-kD-Sc6"/>
-                            <constraint firstAttribute="centerY" secondItem="OPc-d8-r4s" secondAttribute="centerY" id="f1f-5w-3qv"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Term" image="Term" selectedImage="Term Filled" id="kXz-7O-4Qg" userLabel="Third"/>
-                    <navigationItem key="navigationItem" title="Term Schedule" id="0Hg-Br-4kT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tlb-Xp-1RD" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1482" y="370"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="gbI-9C-Jr6">
             <objects>
-                <viewController id="eeu-nL-emS" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="eeu-nL-emS" customClass="FirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eXt-a1-ZO0"/>
                         <viewControllerLayoutGuide type="bottom" id="HjK-Zv-qXP"/>
@@ -234,13 +196,13 @@
                                 <rect key="frame" x="191" y="279" width="218" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SettingsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNr-ZX-Mt0">
                                 <rect key="frame" x="191" y="329" width="219" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -263,8 +225,6 @@
     <resources>
         <image name="Settings" width="25" height="25"/>
         <image name="Settings Filled" width="25" height="25"/>
-        <image name="Term" width="25" height="25"/>
-        <image name="Term Filled" width="25" height="25"/>
         <image name="Today" width="25" height="25"/>
         <image name="Today Filled" width="25" height="25"/>
         <image name="Week" width="25" height="25"/>
