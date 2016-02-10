@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6856E4C01C6BD82B0042E866 /* TodayViewController.m */; };
 		68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */; };
 		68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777A1C3406B3007DD412 /* AppDelegate.m */; };
-		68C3777E1C3406B3007DD412 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777D1C3406B3007DD412 /* FirstViewController.m */; };
+		68C3777E1C3406B3007DD412 /* WeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777D1C3406B3007DD412 /* WeekViewController.m */; };
 		68C377841C3406B3007DD412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C377821C3406B3007DD412 /* Main.storyboard */; };
 		68C377861C3406B3007DD412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C377851C3406B3007DD412 /* Assets.xcassets */; };
 		68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C377871C3406B3007DD412 /* LaunchScreen.storyboard */; };
@@ -36,7 +37,6 @@
 		68C379131C341DEE007DD412 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378FE1C341DEE007DD412 /* UIRefreshControl+AFNetworking.m */; };
 		68C379141C341DEE007DD412 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379001C341DEE007DD412 /* UIWebView+AFNetworking.m */; };
 		68C379161C341E47007DD412 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C379151C341E47007DD412 /* libxml2.2.tbd */; };
-		68C379191C342087007DD412 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C379171C342087007DD412 /* Info.plist */; };
 		68C3791A1C342087007DD412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379181C342087007DD412 /* main.m */; };
 		68C379331C3530FB007DD412 /* BADDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3792C1C3530FB007DD412 /* BADDownloader.m */; };
 		68C379341C3530FB007DD412 /* BADHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3792E1C3530FB007DD412 /* BADHandler.m */; };
@@ -68,12 +68,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6856E4BF1C6BD82B0042E866 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayViewController.h; path = Controllers/TodayViewController.h; sourceTree = "<group>"; };
+		6856E4C01C6BD82B0042E866 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayViewController.m; path = Controllers/TodayViewController.m; sourceTree = "<group>"; };
 		68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityClassCell.xib; sourceTree = "<group>"; };
 		68C377731C3406B3007DD412 /* BMSTU Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMSTU Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C377791C3406B3007DD412 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68C3777A1C3406B3007DD412 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68C3777C1C3406B3007DD412 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		68C3777D1C3406B3007DD412 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		68C3777C1C3406B3007DD412 /* WeekViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeekViewController.h; sourceTree = "<group>"; };
+		68C3777D1C3406B3007DD412 /* WeekViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeekViewController.m; sourceTree = "<group>"; };
 		68C377831C3406B3007DD412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68C377851C3406B3007DD412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68C377881C3406B3007DD412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6856E4C21C6BD8360042E866 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68C3777C1C3406B3007DD412 /* WeekViewController.h */,
+				68C3777D1C3406B3007DD412 /* WeekViewController.m */,
+				6856E4BF1C6BD82B0042E866 /* TodayViewController.h */,
+				6856E4C01C6BD82B0042E866 /* TodayViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		68C3776A1C3406B3007DD412 = {
 			isa = PBXGroup;
 			children = (
@@ -203,8 +216,7 @@
 			children = (
 				68C3792A1C3530FB007DD412 /* Manager */,
 				68C377EC1C341BD3007DD412 /* Model */,
-				68C3777C1C3406B3007DD412 /* FirstViewController.h */,
-				68C3777D1C3406B3007DD412 /* FirstViewController.m */,
+				6856E4C21C6BD8360042E866 /* Controllers */,
 				68C377791C3406B3007DD412 /* AppDelegate.h */,
 				68C3777A1C3406B3007DD412 /* AppDelegate.m */,
 				68C377821C3406B3007DD412 /* Main.storyboard */,
@@ -438,7 +450,7 @@
 		68C3776B1C3406B3007DD412 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Artem Belkov";
 				TargetAttributes = {
 					68C377721C3406B3007DD412 = {
@@ -482,7 +494,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68C379191C342087007DD412 /* Info.plist in Resources */,
 				68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */,
 				68C377861C3406B3007DD412 /* Assets.xcassets in Resources */,
 				68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */,
@@ -514,6 +525,7 @@
 				68C3790B1C341DEE007DD412 /* TFHppleElement.m in Sources */,
 				68C379091C341DEE007DD412 /* AFURLSessionManager.m in Sources */,
 				68C3790C1C341DEE007DD412 /* XPathQuery.m in Sources */,
+				6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */,
 				68C379061C341DEE007DD412 /* AFURLConnectionOperation.m in Sources */,
 				68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */,
 				68C379011C341DEE007DD412 /* AFHTTPRequestOperation.m in Sources */,
@@ -531,7 +543,7 @@
 				68C379361C3530FB007DD412 /* BADSaver.m in Sources */,
 				68C379121C341DEE007DD412 /* UIProgressView+AFNetworking.m in Sources */,
 				68C379131C341DEE007DD412 /* UIRefreshControl+AFNetworking.m in Sources */,
-				68C3777E1C3406B3007DD412 /* FirstViewController.m in Sources */,
+				68C3777E1C3406B3007DD412 /* WeekViewController.m in Sources */,
 				68C379101C341DEE007DD412 /* UIButton+AFNetworking.m in Sources */,
 				68C3790E1C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				68C379051C341DEE007DD412 /* AFSecurityPolicy.m in Sources */,

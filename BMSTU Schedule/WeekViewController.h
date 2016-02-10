@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface WeekViewController : UITableViewController
 
 @end
 

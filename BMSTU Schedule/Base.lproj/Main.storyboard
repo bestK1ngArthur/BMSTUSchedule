@@ -1,65 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
     </dependencies>
     <scenes>
-        <!--Today Schedule-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-Yj-cIk">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <sections/>
-                            </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Today View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="208" y="279" width="184" height="42"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by TodayViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="198" y="329" width="205" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Ahr-Yj-cIk" secondAttribute="bottom" id="6zf-1S-lxs"/>
-                            <constraint firstItem="Ahr-Yj-cIk" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="OJi-Jg-mVg"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="Ahr-Yj-cIk" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="oHc-x8-Cje"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ahr-Yj-cIk" secondAttribute="trailing" constant="-20" id="yeW-GD-T9J"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today Filled" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" title="Today Schedule" id="OAW-0O-GTa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1490" y="-369"/>
-        </scene>
         <!--Item-->
         <scene sceneID="HNu-vM-fGJ">
             <objects>
                 <navigationController id="EA0-fh-ybo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Iga-xR-gxs"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Today" selectedImage="Today Filled" id="Iga-xR-gxs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iyv-Xv-riq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -69,51 +19,68 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Th0-9G-baP"/>
+                        <segue destination="RXV-wR-urU" kind="relationship" relationship="rootViewController" id="HJp-jR-c1X"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCO-UM-RQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="758" y="-364"/>
         </scene>
-        <!--Week Schedule-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Today Scheule-->
+        <scene sceneID="5hJ-75-iBO">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="FirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController id="RXV-wR-urU" customClass="TodayViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="6gw-gp-bdB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="InU-X3-LQr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="QMW-qe-lDG"/>
-                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="dXc-SZ-8wf"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="InU-X3-LQr" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="8Ae-M9-eZx"/>
-                            <constraint firstItem="InU-X3-LQr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="Ftg-tl-ad7"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="InU-X3-LQr" secondAttribute="bottom" id="Hm3-Yk-X5y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="InU-X3-LQr" secondAttribute="trailing" constant="-20" id="Zjf-ax-NLO"/>
-                            <constraint firstItem="InU-X3-LQr" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="dlt-En-7Zf"/>
-                            <constraint firstItem="InU-X3-LQr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="xUn-Fn-7A7"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week Filled" id="cPa-gy-q4n"/>
-                    <navigationItem key="navigationItem" title="Week Schedule" id="MPQ-DU-KzL"/>
-                    <connections>
-                        <outlet property="tableView" destination="InU-X3-LQr" id="hga-Tp-EFw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PGS-O9-JbD">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PGS-O9-JbD" id="iXb-x0-3WD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RXV-wR-urU" id="YMZ-DW-LlX"/>
+                            <outlet property="delegate" destination="RXV-wR-urU" id="Cfa-rr-z5c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Today Scheule" id="qHt-PE-5XR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hd-50-GUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="-364"/>
+        </scene>
+        <!--Week Schedule-->
+        <scene sceneID="X35-Ow-HBf">
+            <objects>
+                <tableViewController id="NY7-BE-t6S" customClass="WeekViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="03l-Kt-74y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Kd7-pH-Tf8">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kd7-pH-Tf8" id="DHH-YH-mvK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NY7-BE-t6S" id="cMA-yK-eB6"/>
+                            <outlet property="delegate" destination="NY7-BE-t6S" id="KFK-8e-U2T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Week Schedule" id="G7Q-qg-U3J"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg8-3A-dCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="363"/>
         </scene>
@@ -142,7 +109,7 @@
         <scene sceneID="4HO-rI-Nx5">
             <objects>
                 <navigationController id="2u9-vM-Bcf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bPm-5W-aQH"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Week" selectedImage="Week Filled" id="bPm-5W-aQH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wE-0b-R5T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -152,7 +119,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Uya-c3-phD"/>
+                        <segue destination="NY7-BE-t6S" kind="relationship" relationship="rootViewController" id="qtP-Qy-SVs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zp-vW-QUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,7 +150,7 @@
         <!--Settings-->
         <scene sceneID="gbI-9C-Jr6">
             <objects>
-                <viewController id="eeu-nL-emS" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="eeu-nL-emS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eXt-a1-ZO0"/>
                         <viewControllerLayoutGuide type="bottom" id="HjK-Zv-qXP"/>
