@@ -75,6 +75,12 @@
 
 #pragma mark - UITableViewDelegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BADUniversityClass *class = [self.currentDay.classes objectAtIndex:indexPath.row];
+        
+    return [UniversityClassCell heightForText:class.title];
+}
 
 #pragma mark - UITableViewDataSource
 

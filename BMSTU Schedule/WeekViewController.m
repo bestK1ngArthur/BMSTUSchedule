@@ -69,7 +69,12 @@
 
 #pragma mark - UITableViewDelegate
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BADUniversityClass *class = [[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+    
+    return [UniversityClassCell heightForText:class.title];
+}
 
 #pragma mark - UITableViewDataSource
 

@@ -5,11 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Today-->
         <scene sceneID="HNu-vM-fGJ">
             <objects>
                 <navigationController id="EA0-fh-ybo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Today" selectedImage="Today Filled" id="Iga-xR-gxs"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today Filled" id="Iga-xR-gxs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iyv-Xv-riq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -88,7 +88,7 @@
         <scene sceneID="7Jn-ti-g06">
             <objects>
                 <navigationController id="cfx-DL-HEZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pzO-Bi-M0v"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Settings" selectedImage="Settings Filled" id="pzO-Bi-M0v"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kG1-qZ-1A2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="728"/>
         </scene>
-        <!--Item-->
+        <!--Week-->
         <scene sceneID="4HO-rI-Nx5">
             <objects>
                 <navigationController id="2u9-vM-Bcf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Week" selectedImage="Week Filled" id="bPm-5W-aQH"/>
+                    <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week Filled" id="bPm-5W-aQH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wE-0b-R5T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
