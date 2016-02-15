@@ -35,12 +35,6 @@
                         <color key="textColor" red="0.24579782196969702" green="0.24579782196969702" blue="0.24579782196969702" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Subject" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-t9-XGh">
-                        <rect key="frame" x="58" y="29" width="254" height="42"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1031л" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-hy-Qrj">
                         <rect key="frame" x="58" y="70" width="130" height="21"/>
                         <constraints>
@@ -71,11 +65,18 @@
                         <color key="textColor" red="0.14901961389999999" green="0.26666668059999998" blue="0.43529412150000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Subject" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-t9-XGh">
+                        <rect key="frame" x="58" y="31" width="254" height="37"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QAq-xW-pjR" firstAttribute="top" secondItem="O7N-qn-aWO" secondAttribute="topMargin" id="4Rh-NC-5yV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3Q8-t9-XGh" secondAttribute="bottom" constant="20" id="5FI-PX-Nlp"/>
-                    <constraint firstItem="3Q8-t9-XGh" firstAttribute="top" secondItem="O7N-qn-aWO" secondAttribute="topMargin" constant="21" id="9LB-O5-Nei"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3Q8-t9-XGh" secondAttribute="bottom" constant="23" id="5FI-PX-Nlp"/>
+                    <constraint firstItem="3Q8-t9-XGh" firstAttribute="top" secondItem="O7N-qn-aWO" secondAttribute="topMargin" constant="23" id="9LB-O5-Nei"/>
                     <constraint firstItem="oUd-hy-Qrj" firstAttribute="leading" secondItem="rjZ-gv-8iX" secondAttribute="trailing" constant="4" id="Cb6-zW-SfV"/>
                     <constraint firstItem="3Q8-t9-XGh" firstAttribute="trailing" secondItem="O7N-qn-aWO" secondAttribute="trailingMargin" id="MVQ-RN-6JX"/>
                     <constraint firstItem="VJT-Rv-Jmw" firstAttribute="trailing" secondItem="O7N-qn-aWO" secondAttribute="trailingMargin" id="N1q-kd-G87"/>

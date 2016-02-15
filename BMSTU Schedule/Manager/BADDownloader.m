@@ -70,9 +70,113 @@
     return object == [NSNull null];
 }
 
-#pragma mark - Schedule
+#pragma mark - Requests
 
-- (void)downloadScheduleForGroup:(BADUniversityGroup *)group
+- (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
+                     onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+    
+    AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    [self.requestOperationManager setResponseSerializer:responseSerializer];
+    
+    [self.requestOperationManager GET:@"semester/get/now/weeknumber"
+                           parameters:nil
+                              success:^(AFHTTPRequestOperation * _Nonnull operation, NSDecimalNumber * _Nonnull responseObject) {
+                                
+                                  NSInteger weekNumber = [responseObject integerValue];
+                                  
+                                  if (success) {
+                                      success(weekNumber);
+                                  }
+                                  
+                              }
+                              failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+                                  
+                                  NSLog(@"Error(getWekNumber): %@", error);
+                                  
+                                  if (failure) {
+                                      failure(error, operation.response.statusCode);
+                                  }
+                                  
+                              }];
+    
+}
+
+- (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
+                          onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+    
+    [self.requestOperationManager GET:@"faculties/get/now/all"
+                           parameters:nil
+                              success:^(AFHTTPRequestOperation * _Nonnull operation, NSArray * _Nonnull responseObject) {
+                                  
+                                  NSMutableArray *faculties = [NSMutableArray array];
+                                  
+                                  for (NSString *shortName in responseObject) {
+                                      
+                                      BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@""
+                                                                                                       shortName:shortName];
+                                      
+                                      [faculties addObject:faculty];
+                                      
+                                  }
+                                  
+                                  if (success) {
+                                      success(faculties);
+                                  }
+                                  
+                              }
+                              failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+                                  
+                                  NSLog(@"Error(getWekNumber): %@", error);
+                                  
+                                  if (failure) {
+                                      failure(error, operation.response.statusCode);
+                                  }
+                                  
+                              }];
+    
+}
+
+- (void)getListOfDepartmentsForFaculty:(BADUniversityFaculty *)faculty
+                             onSuccess:(void (^)(NSArray *faculties))success
+                             onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            faculty.shortName, @"faculty", nil];
+    
+    [self.requestOperationManager GET:@"departments/get/now/param"
+                           parameters:nil
+                              success:^(AFHTTPRequestOperation * _Nonnull operation, NSArray * _Nonnull responseObject) {
+                                  
+                                  NSMutableArray *departments = [NSMutableArray array];
+                                  
+                                  for (NSNumber *number in responseObject) {
+                                      
+                                      BADUniversityDepartment *department = [[BADUniversityDepartment alloc] initWithName:@""
+                                                                                                                   number:[number integerValue]
+                                                                                                                  faculty:faculty];
+                                      
+                                      [departments addObject:department];
+                                      
+                                  }
+                                  
+                                  if (success) {
+                                      success(departments);
+                                  }
+                                  
+                              }
+                              failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+                                  
+                                  NSLog(@"Error(getListOfDepartments): %@", error);
+                                  
+                                  if (failure) {
+                                      failure(error, operation.response.statusCode);
+                                  }
+                                  
+                              }];
+    
+}
+
+- (void)getScheduleForGroup:(BADUniversityGroup *)group
               onSuccess:(void (^)(BADUniversitySchedule *schedule))success
               onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
     
@@ -191,7 +295,7 @@
                               }
                               failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
                                   
-                                  NSLog(@"Error: %@", error);
+                                  NSLog(@"Error(downloadSchedule): %@", error);
                                   
                                   if (failure) {
                                       failure(error, operation.response.statusCode);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68474BC31C725FAD0079B5D8 /* SettingsViewController.m */; };
 		6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6856E4C01C6BD82B0042E866 /* TodayViewController.m */; };
 		68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */; };
 		68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777A1C3406B3007DD412 /* AppDelegate.m */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68474BC21C725FAD0079B5D8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		68474BC31C725FAD0079B5D8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		6856E4BF1C6BD82B0042E866 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayViewController.h; path = Controllers/TodayViewController.h; sourceTree = "<group>"; };
 		6856E4C01C6BD82B0042E866 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayViewController.m; path = Controllers/TodayViewController.m; sourceTree = "<group>"; };
 		68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityClassCell.xib; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				68C3777D1C3406B3007DD412 /* WeekViewController.m */,
 				6856E4BF1C6BD82B0042E866 /* TodayViewController.h */,
 				6856E4C01C6BD82B0042E866 /* TodayViewController.m */,
+				68474BC21C725FAD0079B5D8 /* SettingsViewController.h */,
+				68474BC31C725FAD0079B5D8 /* SettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				68C379051C341DEE007DD412 /* AFSecurityPolicy.m in Sources */,
 				68C379341C3530FB007DD412 /* BADHandler.m in Sources */,
 				68C3790A1C341DEE007DD412 /* TFHpple.m in Sources */,
+				68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */,
 				68C379071C341DEE007DD412 /* AFURLRequestSerialization.m in Sources */,
 				68C379041C341DEE007DD412 /* AFNetworkReachabilityManager.m in Sources */,
 				68C379141C341DEE007DD412 /* UIWebView+AFNetworking.m in Sources */,

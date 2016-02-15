@@ -24,7 +24,7 @@
 @interface TodayViewController ()
 
 @property (strong, nonatomic) BADUniversityDay *currentDay;
-
+@property (assign, nonatomic) NSInteger weekNumber;
 
 @end
 
@@ -33,8 +33,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Getting week number
+    
+    self.weekNumber = 0;
+    
+    [[BADDownloader sharedDownloader]
+     getWeekNumberOnSuccess:^(NSInteger weekNumber) {
+         
+         self.weekNumber = weekNumber;
+         
+         self.navigationItem.title = [[NSString stringWithFormat:@"%ld", weekNumber] stringByAppendingString:@" неделя"];
+         
+     }
+     onFailure:^(NSError *error, NSInteger statusCode) {
+         
+         self.weekNumber = 0;
+         
+     }];
+    
+    // Adding cells
+
     UINib *nib = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"UniversityClassCell"];
+    
+    // Getting schedule
     
     BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@"Факультет информатики и систем управления"
                                                                      shortName:@"ИУ"];
@@ -43,7 +65,7 @@
                                                                                 faculty:faculty];
     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department number:23];
     
-    [[BADDownloader sharedDownloader] downloadScheduleForGroup:group
+    [[BADDownloader sharedDownloader] getScheduleForGroup:group
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
                                                          
                                                          BADHandler *handler = [[BADHandler alloc] init];
@@ -53,8 +75,31 @@
                                                          NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
                                                          NSInteger weekday = [comps weekday];
                                                          
-                                                         if ([currentSchedule.oddWeek objectAtIndex:(weekday - 2)]) {
-                                                             self.currentDay = [currentSchedule.oddWeek objectAtIndex:(weekday - 2)];
+                                                         if (weekday == 1) {
+                                                             weekday = 6;
+                                                         } else {
+                                                             weekday -= 2;
+                                                         }
+                                                         
+                                                         if (([currentSchedule.oddWeek objectAtIndex:weekday]) &&
+                                                             ([currentSchedule.oddWeek count] > weekday)) {
+                                                             
+                                                             if (self.weekNumber == 0) {            // No week
+                                                                 
+                                                             } else if (self.weekNumber % 2 == 0) { // Even week
+                                                                 
+                                                                 self.currentDay = [currentSchedule.evenWeek objectAtIndex:weekday];
+
+                                                                 
+                                                             } else {                               // Odd week
+                                                                 
+                                                                 self.currentDay = [currentSchedule.oddWeek objectAtIndex:weekday];
+
+                                                                 
+                                                             }
+                                                             
+                                                             self.navigationItem.title = self.currentDay.title;
+                                                             
                                                          }
                                                          
                                                          [self.tableView reloadData];
@@ -84,10 +129,12 @@
 
 #pragma mark - UITableViewDataSource
 
+/*
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     return [self.currentDay title];
 }
+*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
