@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Today-->
+        <!--Сегодня-->
         <scene sceneID="HNu-vM-fGJ">
             <objects>
                 <navigationController id="EA0-fh-ybo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today Filled" id="Iga-xR-gxs"/>
+                    <tabBarItem key="tabBarItem" title="Сегодня" image="Today" selectedImage="Today Filled" id="Iga-xR-gxs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iyv-Xv-riq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="758" y="-364"/>
         </scene>
-        <!--Today Scheule-->
+        <!--Сегодня-->
         <scene sceneID="5hJ-75-iBO">
             <objects>
                 <tableViewController id="RXV-wR-urU" customClass="TodayViewController" sceneMemberID="viewController">
@@ -50,13 +50,13 @@
                             <outlet property="delegate" destination="RXV-wR-urU" id="Cfa-rr-z5c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Today Scheule" id="qHt-PE-5XR"/>
+                    <navigationItem key="navigationItem" title="Сегодня" id="qHt-PE-5XR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hd-50-GUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="-364"/>
         </scene>
-        <!--Week Schedule-->
+        <!--Неделя-->
         <scene sceneID="X35-Ow-HBf">
             <objects>
                 <tableViewController id="NY7-BE-t6S" customClass="WeekViewController" sceneMemberID="viewController">
@@ -79,17 +79,17 @@
                             <outlet property="delegate" destination="NY7-BE-t6S" id="KFK-8e-U2T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Week Schedule" id="G7Q-qg-U3J"/>
+                    <navigationItem key="navigationItem" title="Неделя" id="G7Q-qg-U3J"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg8-3A-dCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="363"/>
         </scene>
-        <!--Settings-->
+        <!--Настройки-->
         <scene sceneID="7Jn-ti-g06">
             <objects>
                 <navigationController id="cfx-DL-HEZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" selectedImage="Settings Filled" id="pzO-Bi-M0v"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="Settings" selectedImage="Settings Filled" id="pzO-Bi-M0v"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kG1-qZ-1A2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -107,11 +107,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="728"/>
         </scene>
-        <!--Week-->
+        <!--Неделя-->
         <scene sceneID="4HO-rI-Nx5">
             <objects>
                 <navigationController id="2u9-vM-Bcf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week Filled" id="bPm-5W-aQH"/>
+                    <tabBarItem key="tabBarItem" title="Неделя" image="Week" selectedImage="Week Filled" id="bPm-5W-aQH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wE-0b-R5T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Settings-->
+        <!--Настройки-->
         <scene sceneID="2qS-5E-U1U">
             <objects>
                 <tableViewController id="4fd-Om-Q0E" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                             <outlet property="delegate" destination="4fd-Om-Q0E" id="fRG-fQ-XOn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="kof-LI-lZN"/>
+                    <navigationItem key="navigationItem" title="Настройки" id="kof-LI-lZN"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="groupPicker" destination="5wX-oa-LDL" id="rA3-dv-TxL"/>

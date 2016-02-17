@@ -42,8 +42,6 @@
          
          self.weekNumber = weekNumber;
          
-         self.navigationItem.title = [[NSString stringWithFormat:@"%ld", weekNumber] stringByAppendingString:@" неделя"];
-         
      }
      onFailure:^(NSError *error, NSInteger statusCode) {
          
@@ -110,6 +108,8 @@
                                                          NSLog(@"Loading error!");
                                                          
                                                      }];
+    
+    self.tableView.tableFooterView = [[UIView alloc] init]; // Removing extra separators
     
 }
 
