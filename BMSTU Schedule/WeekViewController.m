@@ -9,6 +9,7 @@
 #import "WeekViewController.h"
 
 #import "UniversityClassCell.h"
+#import "UniversityNoClassCell.h"
 
 #import "BADUniversityGroup.h"
 #import "BADUniversityDepartment.h"
@@ -55,22 +56,18 @@
     
     // Adding cells
     
-    UINib *nib = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"UniversityClassCell"];
+    UINib *nibClassCell = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
+    [self.tableView registerNib:nibClassCell forCellReuseIdentifier:@"UniversityClassCell"];
     
-    // Getting schedule
+    UINib *nibNoClassCell = [UINib nibWithNibName:@"UniversityNoClassCell" bundle:nil];
+    [self.tableView registerNib:nibNoClassCell forCellReuseIdentifier:@"UniversityNoClassCell"];
     
-    /*
-    BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@"Факультет информатики и систем управления"
-                                                                     shortName:@"ИУ"];
-    BADUniversityDepartment *department = [[BADUniversityDepartment alloc] initWithName:@"Кафедра систем обработки информации и управления"
-                                                                                 number:5
-                                                                                faculty:faculty];
-    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department number:23];
-    */
+    // Getting group
     
     NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
     self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    // Getting schedule
     
     [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
@@ -118,15 +115,39 @@
         
     } else if (self.weekNumber % 2 == 0) { // Even week
         
-        class = [[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+        if ([[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] count] == 0) {
+            
+            //UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
+            
+            return 200;//CGRectGetHeight(cell.frame);
+            
+        } else {
+            
+            class = [[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+            
+            return [UniversityClassCell heightForText:class.title];
+            
+        }
         
     } else {                               // Odd week
         
-        class = [[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+        if ([[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] count] == 0) {
+            
+            //UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
+            
+            return 200;//CGRectGetHeight(cell.frame);
+            
+        } else {
+            
+            class = [[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+            
+            return [UniversityClassCell heightForText:class.title];
+            
+        }
+
         
     }
     
-    return [UniversityClassCell heightForText:class.title];
 }
 
 #pragma mark - UITableViewDataSource
@@ -140,15 +161,15 @@
     } else if (self.weekNumber % 2 == 0) { // Even week
         
         if ([[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count] == 0) {
-            return [[[self.currentSchedule.evenWeek objectAtIndex:section] title] stringByAppendingString:@" - нет занятий"];
+            return [[self.currentSchedule.evenWeek objectAtIndex:section] title];
         } else {
             return [[self.currentSchedule.evenWeek objectAtIndex:section] title];
         }
         
     } else {                               // Odd week
         
-        if ([[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count] == 0) {
-            return [[[self.currentSchedule.oddWeek objectAtIndex:section] title] stringByAppendingString:@" - нет занятий"];
+        if ([[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count] == 0) {
+            return [[self.currentSchedule.oddWeek objectAtIndex:section] title];
         } else {
             return [[self.currentSchedule.oddWeek objectAtIndex:section] title];
         }
@@ -182,11 +203,20 @@
         
     } else if (self.weekNumber % 2 == 0) { // Even week
         
-        return [[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count];
+        if ([[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count] == 0) {
+            return 1;
+        } else {
+            return [[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count];
+        }
+        
         
     } else {                               // Odd week
         
-        return [[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count];
+        if ([[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count] == 0) {
+            return 1;
+        } else {
+            return [[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count];
+        }
         
     }
     
@@ -194,33 +224,63 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UniversityClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityClassCell" forIndexPath:indexPath];
-    
-    BADUniversityClass *class;
-    
     if (self.weekNumber == 0) {            // No week
         
         return nil;
         
     } else if (self.weekNumber % 2 == 0) { // Even week
         
-        class = [[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+        if ([[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] count] == 0) {
+            
+            UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
+            
+            return cell;
+            
+        } else {
+            
+            UniversityClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityClassCell" forIndexPath:indexPath];
+            
+            BADUniversityClass *class = [[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+            
+            cell.classTitleLabel.text = class.title;
+            cell.classTypeLabel.text = [BADUniversityClass stringFromType:class.type];
+            cell.classRoomLabel.text = class.room;
+            cell.classTeacherLabel.text = class.teacher;
+            
+            cell.beginTimeLabel.text = class.startTime;
+            cell.endTimeLabel.text = class.endTime;
+            
+            return cell;
+            
+        }
         
     } else {                               // Odd week
         
-        class = [[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+        if ([[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] count] == 0) {
+            
+            UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
+            
+            return cell;
+            
+        } else {
+            
+            UniversityClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityClassCell" forIndexPath:indexPath];
+            
+            BADUniversityClass *class = [[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] objectAtIndex:indexPath.row];
+            
+            cell.classTitleLabel.text = class.title;
+            cell.classTypeLabel.text = [BADUniversityClass stringFromType:class.type];
+            cell.classRoomLabel.text = class.room;
+            cell.classTeacherLabel.text = class.teacher;
+            
+            cell.beginTimeLabel.text = class.startTime;
+            cell.endTimeLabel.text = class.endTime;
+            
+            return cell;
+            
+        }
         
     }
-    
-    cell.classTitleLabel.text = class.title;
-    cell.classTypeLabel.text = [BADUniversityClass stringFromType:class.type];
-    cell.classRoomLabel.text = class.room;
-    cell.classTeacherLabel.text = class.teacher;
-    
-    cell.beginTimeLabel.text = class.startTime;
-    cell.endTimeLabel.text = class.endTime;
-    
-    return cell;
     
 }
 

@@ -9,6 +9,7 @@
 #import "TodayViewController.h"
 
 #import "UniversityClassCell.h"
+#import "UniversityNoClassCell.h"
 
 #import "BADUniversityGroup.h"
 #import "BADUniversityDepartment.h"
@@ -54,19 +55,15 @@
     UINib *nib = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"UniversityClassCell"];
     
-    // Getting schedule
+    UINib *nibNoClassCell = [UINib nibWithNibName:@"UniversityNoClassCell" bundle:nil];
+    [self.tableView registerNib:nibNoClassCell forCellReuseIdentifier:@"UniversityNoClassCell"];
     
-    /*
-    BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@"Факультет информатики и систем управления"
-                                                                     shortName:@"ИУ"];
-    BADUniversityDepartment *department = [[BADUniversityDepartment alloc] initWithName:@"Кафедра систем обработки информации и управления"
-                                                                                 number:5
-                                                                                faculty:faculty];
-    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department number:23];
-    */
-     
+    // Getting group
+    
     NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    // Getting schedule
     
     [[BADDownloader sharedDownloader] getScheduleForGroup:group
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
@@ -130,9 +127,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    BADUniversityClass *class = [self.currentDay.classes objectAtIndex:indexPath.row];
+    if ([self.currentDay.classes count] == 0) {
         
-    return [UniversityClassCell heightForText:class.title];
+        return 200;
+        
+    } else {
+        
+        BADUniversityClass *class = [self.currentDay.classes objectAtIndex:indexPath.row];
+        
+        return [UniversityClassCell heightForText:class.title];
+        
+    }
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -151,24 +157,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.currentDay.classes count];
+    if ([self.currentDay.classes count] == 0) {
+        
+        self.navigationItem.title = @"Воскресенье";
+        
+        return 1;
+        
+    } else {
+
+        return [self.currentDay.classes count];
+
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UniversityClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityClassCell" forIndexPath:indexPath];
-    
-    BADUniversityClass *class = [self.currentDay.classes objectAtIndex:indexPath.row];
-    
-    cell.classTitleLabel.text = class.title;
-    cell.classTypeLabel.text = [BADUniversityClass stringFromType:class.type];
-    cell.classRoomLabel.text = class.room;
-    cell.classTeacherLabel.text = class.teacher;
-    
-    cell.beginTimeLabel.text = class.startTime;
-    cell.endTimeLabel.text = class.endTime;
-    
-    return cell;
+    if ([self.currentDay.classes count] == 0) {
+        
+        UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
+        
+        return cell;
+        
+    } else {
+        
+        UniversityClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityClassCell" forIndexPath:indexPath];
+        
+        BADUniversityClass *class = [self.currentDay.classes objectAtIndex:indexPath.row];
+        
+        cell.classTitleLabel.text = class.title;
+        cell.classTypeLabel.text = [BADUniversityClass stringFromType:class.type];
+        cell.classRoomLabel.text = class.room;
+        cell.classTeacherLabel.text = class.teacher;
+        
+        cell.beginTimeLabel.text = class.startTime;
+        cell.endTimeLabel.text = class.endTime;
+        
+        return cell;
+        
+    }
     
 }
 

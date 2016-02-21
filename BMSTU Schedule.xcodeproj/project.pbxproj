@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68474BC31C725FAD0079B5D8 /* SettingsViewController.m */; };
 		6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6856E4C01C6BD82B0042E866 /* TodayViewController.m */; };
+		68B119971C7A19C700BBBE36 /* UniversityNoClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B119951C7A19C700BBBE36 /* UniversityNoClassCell.m */; };
+		68B119981C7A19C700BBBE36 /* UniversityNoClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B119961C7A19C700BBBE36 /* UniversityNoClassCell.xib */; };
 		68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */; };
 		68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777A1C3406B3007DD412 /* AppDelegate.m */; };
 		68C3777E1C3406B3007DD412 /* WeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3777D1C3406B3007DD412 /* WeekViewController.m */; };
@@ -73,6 +75,9 @@
 		68474BC31C725FAD0079B5D8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		6856E4BF1C6BD82B0042E866 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayViewController.h; path = Controllers/TodayViewController.h; sourceTree = "<group>"; };
 		6856E4C01C6BD82B0042E866 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayViewController.m; path = Controllers/TodayViewController.m; sourceTree = "<group>"; };
+		68B119941C7A19C700BBBE36 /* UniversityNoClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityNoClassCell.h; sourceTree = "<group>"; };
+		68B119951C7A19C700BBBE36 /* UniversityNoClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityNoClassCell.m; sourceTree = "<group>"; };
+		68B119961C7A19C700BBBE36 /* UniversityNoClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityNoClassCell.xib; sourceTree = "<group>"; };
 		68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityClassCell.xib; sourceTree = "<group>"; };
 		68C377731C3406B3007DD412 /* BMSTU Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMSTU Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C377791C3406B3007DD412 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -389,6 +394,9 @@
 				68C66E5A1C54BFA100C318D6 /* UniversityClassCell.h */,
 				68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */,
 				68C0CA2B1C561DBB008D81FD /* UniversityClassCell.xib */,
+				68B119941C7A19C700BBBE36 /* UniversityNoClassCell.h */,
+				68B119951C7A19C700BBBE36 /* UniversityNoClassCell.m */,
+				68B119961C7A19C700BBBE36 /* UniversityNoClassCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -500,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */,
+				68B119981C7A19C700BBBE36 /* UniversityNoClassCell.xib in Resources */,
 				68C377861C3406B3007DD412 /* Assets.xcassets in Resources */,
 				68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */,
 				68C377841C3406B3007DD412 /* Main.storyboard in Resources */,
@@ -538,6 +547,7 @@
 				68C3790D1C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				68C379431C353163007DD412 /* BADUniversityClass.m in Sources */,
 				68C379441C353163007DD412 /* BADUniversitySchedule.m in Sources */,
+				68B119971C7A19C700BBBE36 /* UniversityNoClassCell.m in Sources */,
 				68C66E581C54AEC800C318D6 /* BADUniversityDay.m in Sources */,
 				68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */,
 				68C379021C341DEE007DD412 /* AFHTTPRequestOperationManager.m in Sources */,
