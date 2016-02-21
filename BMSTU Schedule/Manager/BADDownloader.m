@@ -70,7 +70,7 @@
     return object == [NSNull null];
 }
 
-#pragma mark - Requests
+#pragma mark - General information
 
 - (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
                      onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
@@ -100,6 +100,8 @@
                               }];
     
 }
+
+#pragma mark - University structure
 
 - (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
                           onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
@@ -144,7 +146,7 @@
                             faculty.shortName, @"faculty", nil];
     
     [self.requestOperationManager GET:@"departments/get/now/param"
-                           parameters:nil
+                           parameters:params
                               success:^(AFHTTPRequestOperation * _Nonnull operation, NSArray * _Nonnull responseObject) {
                                   
                                   NSMutableArray *departments = [NSMutableArray array];
@@ -156,6 +158,26 @@
                                                                                                                   faculty:faculty];
                                       
                                       [departments addObject:department];
+                                      
+                                      departments = [NSMutableArray arrayWithArray:[departments sortedArrayUsingComparator:^NSComparisonResult(BADUniversityFaculty*  _Nonnull department1, BADUniversityFaculty*  _Nonnull department2) {
+                                          
+                                          NSInteger number1 = [[[department1.shortName componentsSeparatedByCharactersInSet:
+                                                                 [[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""] integerValue];
+                                          
+                                          NSInteger number2 = [[[department2.shortName componentsSeparatedByCharactersInSet:
+                                                                 [[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""] integerValue];
+                                          
+                                          if (number1 < number2) {
+                                              
+                                              return NSOrderedAscending;
+                                              
+                                          } else {
+                                              
+                                              return NSOrderedDescending;
+                                              
+                                          }
+                                          
+                                      }]];
                                       
                                   }
                                   
@@ -175,6 +197,52 @@
                               }];
     
 }
+
+- (void)getListOfGroupsForDepartment:(BADUniversityDepartment *)department
+                              course:(NSInteger)course
+                           onSuccess:(void (^)(NSArray *))success
+                           onFailure:(void (^)(NSError *, NSInteger))failure {
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            department.faculty.shortName, @"faculty",
+                            @(department.number), @"department",
+                            @(course), @"course", nil];
+    
+    [self.requestOperationManager GET:@"studygroup/get/now/param"
+                           parameters:params
+                              success:^(AFHTTPRequestOperation * _Nonnull operation, NSArray * _Nonnull responseObject) {
+                                  
+                                  NSMutableArray *groups = [NSMutableArray array];
+                                  
+                                  for (NSString *string in responseObject) {
+                                      
+                                      NSInteger number = [[[string componentsSeparatedByString:@"-"] objectAtIndex:1] integerValue];
+                                      
+                                      BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department
+                                                                                                          number:number];
+                                      
+                                      [groups addObject:group];
+                                      
+                                  }
+                                  
+                                  if (success) {
+                                      success(groups);
+                                  }
+                                  
+                              }
+                              failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+                                  
+                                  NSLog(@"Error(getListOfGroups): %@", error);
+                                  
+                                  if (failure) {
+                                      failure(error, operation.response.statusCode);
+                                  }
+                                  
+                              }];
+    
+}
+
+#pragma mark - Schedule
 
 - (void)getScheduleForGroup:(BADUniversityGroup *)group
               onSuccess:(void (^)(BADUniversitySchedule *schedule))success

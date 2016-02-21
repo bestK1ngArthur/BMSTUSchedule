@@ -23,6 +23,8 @@
 
 @interface WeekViewController ()
 
+@property (strong, nonatomic) BADUniversityGroup *currentGroup;
+
 @property (strong, nonatomic) BADUniversitySchedule *currentSchedule;
 @property (assign, nonatomic) NSInteger weekNumber;
 
@@ -58,14 +60,19 @@
     
     // Getting schedule
     
+    /*
     BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@"Факультет информатики и систем управления"
                                                                      shortName:@"ИУ"];
     BADUniversityDepartment *department = [[BADUniversityDepartment alloc] initWithName:@"Кафедра систем обработки информации и управления"
                                                                                  number:5
                                                                                 faculty:faculty];
     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department number:23];
+    */
     
-    [[BADDownloader sharedDownloader] getScheduleForGroup:group
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
                                                          
                                                          BADHandler *handler = [[BADHandler alloc] init];
@@ -80,6 +87,18 @@
                                                          
                                                      }];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    if (![[group fullTitle] isEqualToString:[self.currentGroup fullTitle]]) {
+        
+        [self viewDidLoad];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

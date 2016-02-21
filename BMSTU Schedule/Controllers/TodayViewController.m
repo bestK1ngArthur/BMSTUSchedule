@@ -56,12 +56,17 @@
     
     // Getting schedule
     
+    /*
     BADUniversityFaculty *faculty = [[BADUniversityFaculty alloc] initWithName:@"Факультет информатики и систем управления"
                                                                      shortName:@"ИУ"];
     BADUniversityDepartment *department = [[BADUniversityDepartment alloc] initWithName:@"Кафедра систем обработки информации и управления"
                                                                                  number:5
                                                                                 faculty:faculty];
     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithDepartment:department number:23];
+    */
+     
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
     
     [[BADDownloader sharedDownloader] getScheduleForGroup:group
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
@@ -79,24 +84,27 @@
                                                              weekday -= 2;
                                                          }
                                                          
-                                                         if (([currentSchedule.oddWeek objectAtIndex:weekday]) &&
-                                                             ([currentSchedule.oddWeek count] > weekday)) {
+                                                         if ([currentSchedule.oddWeek count] > weekday) {
                                                              
-                                                             if (self.weekNumber == 0) {            // No week
+                                                             if ([currentSchedule.oddWeek objectAtIndex:weekday]) {
                                                                  
-                                                             } else if (self.weekNumber % 2 == 0) { // Even week
+                                                                 if (self.weekNumber == 0) {            // No week
+                                                                     
+                                                                 } else if (self.weekNumber % 2 == 0) { // Even week
+                                                                     
+                                                                     self.currentDay = [currentSchedule.evenWeek objectAtIndex:weekday];
+                                                                     
+                                                                     
+                                                                 } else {                               // Odd week
+                                                                     
+                                                                     self.currentDay = [currentSchedule.oddWeek objectAtIndex:weekday];
+                                                                     
+                                                                     
+                                                                 }
                                                                  
-                                                                 self.currentDay = [currentSchedule.evenWeek objectAtIndex:weekday];
-
-                                                                 
-                                                             } else {                               // Odd week
-                                                                 
-                                                                 self.currentDay = [currentSchedule.oddWeek objectAtIndex:weekday];
-
+                                                                 self.navigationItem.title = self.currentDay.title;
                                                                  
                                                              }
-                                                             
-                                                             self.navigationItem.title = self.currentDay.title;
                                                              
                                                          }
                                                          

@@ -17,17 +17,20 @@
 typedef enum {
     GroupPickerComponentTypeFaculty    = 0,
     GroupPickerComponentTypeDepartment = 1,
-    GroupPickerComponentTypeGroup      = 2
+    GroupPickerComponentTypeCourse     = 2,
+    GroupPickerComponentTypeGroup      = 3
 } GroupPickerComponentType;
 
 @interface SettingsViewController ()
 
-@property (strong, nonatomic) NSArray *listOfFaculties;
-@property (strong, nonatomic) NSArray *listOfDepartments;
-@property (strong, nonatomic) NSArray *listOfGroups;
+@property (strong, nonatomic) NSArray *faculties;
+@property (strong, nonatomic) NSArray *departments;
+@property (strong, nonatomic) NSArray *courses;
+@property (strong, nonatomic) NSArray *groups;
 
 @property (strong, nonatomic) BADUniversityFaculty *selectedFaculty;
 @property (strong, nonatomic) BADUniversityDepartment *selectedDepartment;
+@property (assign, nonatomic) NSInteger selectedCourse;
 @property (strong, nonatomic) BADUniversityGroup *selectedGroup;
 
 @end
@@ -37,20 +40,32 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.courses = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
+    
     [[BADDownloader sharedDownloader] getListOfFacultiesOnSuccess:^(NSArray *faculties) {
         
-        [[BADDownloader sharedDownloader] getListOfDepartmentsForFaculty:[faculties objectAtIndex:0]
-                                                               onSuccess:^(NSArray *faculties) {
-                                                                   
-                                                               }
-                                                               onFailure:^(NSError *error, NSInteger statusCode) {
-                                                                   
-                                                               }];
+        self.faculties = faculties;
+        [self.groupPicker reloadAllComponents];
         
-    }
-    onFailure:^(NSError *error, NSInteger statusCode) {
-                                                            
-    
+        [self.groupPicker selectRow:0 inComponent:0 animated:true];
+        
+        NSString *groupString = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+        BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:groupString];
+        
+        for (BADUniversityFaculty *faculty in self.faculties) {
+            
+            if ([faculty.shortName isEqualToString:group.department.faculty.shortName]) {
+                
+                [self.groupPicker selectRow:[faculties indexOfObject:faculty] inComponent:GroupPickerComponentTypeFaculty animated:true];
+                [self pickerView:self.groupPicker didSelectRow:[faculties indexOfObject:faculty] inComponent:GroupPickerComponentTypeFaculty];
+                
+            }
+        }
+        
+    } onFailure:^(NSError *error, NSInteger statusCode) {
+        
+        
+        
     }];
     
 }
@@ -65,7 +80,7 @@ typedef enum {
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 3;
+    return 4;
 }
 
 // The number of rows of data
@@ -74,25 +89,33 @@ typedef enum {
     
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         
-        if (self.listOfFaculties.count > 0) {
+        if (self.faculties.count > 0) {
             
-            return self.listOfFaculties.count;
+            return self.faculties.count;
             
         }
         
     } else if (component == GroupPickerComponentTypeDepartment) { // If department component
         
-        if (self.listOfDepartments.count > 0) {
+        if (self.departments.count > 0) {
             
-            return self.listOfDepartments.count;
+            return self.departments.count;
+            
+        }
+        
+    }else if (component == GroupPickerComponentTypeCourse) { // If course component
+        
+        if (self.departments.count > 0) {
+            
+            return self.courses.count;
             
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If group component
         
-        if (self.listOfGroups.count > 0) {
+        if (self.groups.count > 0) {
             
-            return self.listOfGroups.count;
+            return self.groups.count;
             
         }
         
@@ -107,25 +130,33 @@ typedef enum {
     
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         
-        if (self.listOfFaculties.count > 0) {
+        if (self.faculties.count > 0) {
             
-            return [[self.listOfFaculties objectAtIndex:row] shortName];
+            return [[self.faculties objectAtIndex:row] shortName];
             
         }
         
     } else if (component == GroupPickerComponentTypeDepartment) { // If department component
         
-        if (self.listOfDepartments.count > 0) {
+        if (self.departments.count > 0) {
             
-            return [[self.listOfDepartments objectAtIndex:row] shortName];
+            return [[self.departments objectAtIndex:row] shortName];
+            
+        }
+        
+    } else if (component == GroupPickerComponentTypeCourse) { // If course component
+        
+        if (self.courses.count > 0) {
+            
+            return [[NSString alloc] initWithFormat:@"%@", [self.courses objectAtIndex:row]];
             
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If group component
         
-        if (self.listOfGroups.count > 0) {
+        if (self.groups.count > 0) {
             
-            return [[NSString alloc] initWithFormat:@"%ld", (long)[[self.listOfGroups objectAtIndex:row] number]];
+            return [[NSString alloc] initWithFormat:@"%ld", (long)[[self.groups objectAtIndex:row] number]];
             
         }
         
@@ -134,113 +165,129 @@ typedef enum {
     return nil;
 }
 
-/*
 // Catpure the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     if (component == GroupPickerComponentTypeFaculty) { // If touch faculty component
         
-        if (self.listOfFaculties.count > 0) {
+        if (self.faculties.count > 0) {
             
-            self.selectedFaculty = [self.listOfFaculties objectAtIndex:row];
+            self.selectedFaculty = [self.faculties objectAtIndex:row];
             
-            [self.selectedFaculty loadListOfDepartmentsOnSuccess:^(NSArray *listOfDepartments) {
-                
-                self.listOfDepartments = listOfDepartments;
-                
-                [pickerView reloadAllComponents];
-                
-                NSString *groupString = [[NSUserDefaults standardUserDefaults] objectForKey:@"ScheduleCurrentGroup"];
-                BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:groupString];
-                
-                BOOL isFound = false;
-                
-                for (BADUniversityDepartment *department in self.listOfDepartments) {
-                    
-                    if ([department.shortName isEqualToString:group.department.shortName]) {
-                        
-                        isFound = true;
-                        
-                        [pickerView selectRow:[self.listOfDepartments indexOfObject:department]
-                                  inComponent:GroupPickerComponentTypeDepartment animated:true];
-                        [self pickerView:pickerView
-                            didSelectRow:[self.listOfDepartments indexOfObject:department]
-                             inComponent:GroupPickerComponentTypeDepartment];
-                        
-                    }
-                    
-                }
-                
-                if (!isFound) {
-                    
-                    [pickerView selectRow:0 inComponent:GroupPickerComponentTypeDepartment animated:true];
-                    [self pickerView:pickerView didSelectRow:0 inComponent:GroupPickerComponentTypeDepartment];
-                    
-                }
-                
-            } onFailure:^(NSError *error, NSInteger statusCode) {
-                
-            }]; // Load departments for faculty
+            [[BADDownloader sharedDownloader] getListOfDepartmentsForFaculty:self.selectedFaculty
+                                                                   onSuccess:^(NSArray *faculties) {
+                                                                       
+                                                                       self.departments = faculties;
+                                                                       
+                                                                       [pickerView reloadAllComponents];
+                                                                       
+                                                                       NSString *groupString = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+                                                                       BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:groupString];
+                                                                       
+                                                                       BOOL isFound = false;
+                                                                       
+                                                                       for (BADUniversityDepartment *department in self.departments) {
+                                                                           
+                                                                           if ([department.shortName isEqualToString:group.department.shortName]) {
+                                                                               
+                                                                               isFound = true;
+                                                                               
+                                                                               [pickerView selectRow:[self.departments indexOfObject:department]
+                                                                                         inComponent:GroupPickerComponentTypeDepartment animated:true];
+                                                                               [self pickerView:pickerView
+                                                                                   didSelectRow:[self.departments indexOfObject:department]
+                                                                                    inComponent:GroupPickerComponentTypeDepartment];
+                                                                               
+                                                                           }
+                                                                           
+                                                                       }
+                                                                       
+                                                                       if (!isFound) {
+                                                                           
+                                                                           [pickerView selectRow:0 inComponent:GroupPickerComponentTypeDepartment animated:true];
+                                                                           [self pickerView:pickerView didSelectRow:0 inComponent:GroupPickerComponentTypeDepartment];
+                                                                           
+                                                                       }
+                                                                       
+                                                                   }
+                                                                   onFailure:^(NSError *error, NSInteger statusCode) {
+                                                                       
+                                                                   }]; // Load departments for faculty
             
         }
         
     } else if (component == GroupPickerComponentTypeDepartment) { // If touch department component
         
-        if (self.listOfDepartments.count > 0) {
+        if (self.departments.count > 0) {
             
-            self.selectedDepartment = [self.listOfDepartments objectAtIndex:row];
-            [self.selectedDepartment loadListOfGroupsOnSuccess:^(NSArray *listOfGroups) {
-                
-                self.listOfGroups = listOfGroups;
-                
-                [pickerView reloadAllComponents];
-                
-                NSString *groupString = [[NSUserDefaults standardUserDefaults] objectForKey:@"ScheduleCurrentGroup"];
-                BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:groupString];
-                
-                BOOL isFound = false;
-                
-                for (BADUniversityGroup *nowGroup in self.listOfGroups) {
-                    
-                    if ([[nowGroup getFullNumber] isEqualToString:[group getFullNumber]]) {
-                        
-                        isFound = true;
-                        
-                        [pickerView selectRow:[listOfGroups indexOfObject:nowGroup]
-                                  inComponent:GroupPickerComponentTypeGroup animated:true];
-                        [self pickerView:pickerView didSelectRow:[listOfGroups indexOfObject:nowGroup]
-                             inComponent:GroupPickerComponentTypeGroup];
-                        
-                    }
-                    
-                }
-                
-                if (!isFound) {
-                    
-                    [pickerView selectRow:0 inComponent:GroupPickerComponentTypeGroup animated:true];
-                    [self pickerView:pickerView didSelectRow:0 inComponent:GroupPickerComponentTypeGroup];
-                    
-                }
-                
-            } onFailure:^(NSError *error, NSInteger statusCode) {
-                
-            }]; // Load groups for department
+            self.selectedDepartment = [self.departments objectAtIndex:row];
+            
+            [pickerView selectRow:0 inComponent:GroupPickerComponentTypeCourse animated:true];
+            [self pickerView:pickerView didSelectRow:0 inComponent:GroupPickerComponentTypeCourse];
+            
+        }
+        
+    } else if (component == GroupPickerComponentTypeCourse) { // If touch course component
+        
+        if (self.courses.count > 0) {
+            
+            self.selectedCourse = (NSInteger)[self.courses objectAtIndex:row];
+            
+            [[BADDownloader sharedDownloader] getListOfGroupsForDepartment:self.selectedDepartment
+                                                                    course:[[self.courses objectAtIndex:row] integerValue]
+                                                                 onSuccess:^(NSArray *groups) {
+                                                                     
+                                                                     self.groups = groups;
+                                                                     
+                                                                     [pickerView reloadAllComponents];
+                                                                     
+                                                                     NSString *groupString = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+                                                                     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:groupString];
+                                                                     
+                                                                     BOOL isFound = false;
+                                                                     
+                                                                     for (BADUniversityGroup *nowGroup in self.groups) {
+                                                                         
+                                                                         if ([nowGroup.fullTitle isEqualToString:group.fullTitle]) {
+                                                                             
+                                                                             isFound = true;
+                                                                             
+                                                                             [pickerView selectRow:[groups indexOfObject:nowGroup]
+                                                                                       inComponent:GroupPickerComponentTypeGroup animated:true];
+                                                                             [self pickerView:pickerView didSelectRow:[groups indexOfObject:nowGroup]
+                                                                                  inComponent:GroupPickerComponentTypeGroup];
+                                                                             
+                                                                         }
+                                                                         
+                                                                     }
+                                                                     
+                                                                     if (!isFound) {
+                                                                         
+                                                                         [pickerView selectRow:0 inComponent:GroupPickerComponentTypeGroup animated:true];
+                                                                         [self pickerView:pickerView didSelectRow:0 inComponent:GroupPickerComponentTypeGroup];
+                                                                         
+                                                                     }
+                                                                     
+                                                                 }
+                                                                 onFailure:^(NSError *error, NSInteger statusCode) {
+                                                                     
+                                                                 }]; // Load groups for department
             
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If touch group component
         
-        if (self.listOfGroups.count > 0) {
+        if (self.groups.count > 0) {
             
-            self.selectedGroup = [self.listOfGroups objectAtIndex:row];
+            self.selectedGroup = [self.groups objectAtIndex:row];
             
-            [[NSUserDefaults standardUserDefaults] setObject:[self.selectedGroup getFullNumber] forKey:@"ScheduleCurrentGroup"];
+            [[NSUserDefaults standardUserDefaults] setObject:self.selectedGroup.fullTitle forKey:@"CurrentGroup"];
             
         }
         
     }
     
 }
-*/
 
 @end
+
