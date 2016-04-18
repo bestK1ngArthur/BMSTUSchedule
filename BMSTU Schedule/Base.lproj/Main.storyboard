@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="dOE-QJ-Do5">
+            <objects>
+                <viewController id="ZEd-19-kF7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNl-GP-O56"/>
+                        <viewControllerLayoutGuide type="bottom" id="ACQ-5V-03i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TCx-AS-1jd">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9va-aX-zKv">
+                                <rect key="frame" x="200" y="74" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HgX-TP-pdH"/>
+                                    <constraint firstAttribute="width" constant="200" id="wSC-Uz-VFr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check internet connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTx-YH-0nT">
+                                <rect key="frame" x="20" y="282" width="560" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fU6-FV-LYU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTx-YH-0nT" firstAttribute="leading" secondItem="TCx-AS-1jd" secondAttribute="leadingMargin" id="Pft-x2-G7R"/>
+                            <constraint firstItem="9va-aX-zKv" firstAttribute="centerX" secondItem="TCx-AS-1jd" secondAttribute="centerX" id="cOx-by-ZkR"/>
+                            <constraint firstItem="9va-aX-zKv" firstAttribute="centerY" secondItem="TCx-AS-1jd" secondAttribute="centerY" constant="-94" id="ycC-xT-HaO"/>
+                            <constraint firstItem="oTx-YH-0nT" firstAttribute="top" secondItem="9va-aX-zKv" secondAttribute="bottom" constant="8" id="zDp-WX-4Wi"/>
+                            <constraint firstItem="oTx-YH-0nT" firstAttribute="trailing" secondItem="TCx-AS-1jd" secondAttribute="trailingMargin" id="zq2-4q-ZkD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YU0-7Z-C0h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XeG-iS-9wM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-1354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lXM-yI-MaI">
+            <objects>
+                <navigationController id="Xym-yR-STl" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gh6-hh-xIz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2901960784" green="0.72941176470000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZEd-19-kF7" kind="relationship" relationship="rootViewController" id="4zL-0m-VSC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvh-WN-k7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-679"/>
+        </scene>
         <!--Сегодня-->
         <scene sceneID="HNu-vM-fGJ">
             <objects>

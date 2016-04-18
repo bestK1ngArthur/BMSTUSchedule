@@ -38,6 +38,8 @@
     
     // Getting week number
     
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
     self.weekNumber = 0;
     
     [[BADDownloader sharedDownloader]
@@ -76,9 +78,13 @@
                                                          self.currentSchedule = [handler handleSchedule:schedule];
                                                          
                                                          [self.tableView reloadData];
+                                                         
+                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                                                                                   
                                                      }
                                                      onFailure:^(NSError *error, NSInteger statusCode) {
+                                                         
+                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          
                                                          NSLog(@"Loading error!");
                                                          

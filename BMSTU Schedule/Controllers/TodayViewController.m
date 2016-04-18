@@ -24,6 +24,8 @@
 
 @interface TodayViewController ()
 
+@property (strong, nonatomic) BADUniversityGroup *currentGroup;
+
 @property (strong, nonatomic) BADUniversityDay *currentDay;
 @property (assign, nonatomic) NSInteger weekNumber;
 
@@ -35,6 +37,8 @@
     [super viewDidLoad];
     
     // Getting week number
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
     self.weekNumber = 0;
     
@@ -61,12 +65,14 @@
     // Getting group
     
     NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
-    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
     
     // Getting schedule
     
-    [[BADDownloader sharedDownloader] getScheduleForGroup:group
+    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
                                                      onSuccess:^(BADUniversitySchedule *schedule) {
+                                                         
+                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          
                                                          BADHandler *handler = [[BADHandler alloc] init];
                                                          BADUniversitySchedule *currentSchedule = [handler handleSchedule:schedule];
@@ -110,12 +116,26 @@
                                                      }
                                                      onFailure:^(NSError *error, NSInteger statusCode) {
                                                          
+                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                         
                                                          NSLog(@"Loading error!");
                                                          
                                                      }];
     
     self.tableView.tableFooterView = [[UIView alloc] init]; // Removing extra separators
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    if (![[group fullTitle] isEqualToString:[self.currentGroup fullTitle]]) {
+        
+        [self viewDidLoad];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
