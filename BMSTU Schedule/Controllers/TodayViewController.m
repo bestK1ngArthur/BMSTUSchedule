@@ -48,7 +48,7 @@
          self.weekNumber = weekNumber;
          
      }
-     onFailure:^(NSError *error, NSInteger statusCode) {
+     onFailure:^(NSError *error) {
          
          self.weekNumber = 0;
          
@@ -114,7 +114,7 @@
                                                          [self.tableView reloadData];
                                                          
                                                      }
-                                                     onFailure:^(NSError *error, NSInteger statusCode) {
+                                                     onFailure:^(NSError *error) {
                                                          
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          

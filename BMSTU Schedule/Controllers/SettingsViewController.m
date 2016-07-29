@@ -62,7 +62,7 @@ typedef enum {
             }
         }
         
-    } onFailure:^(NSError *error, NSInteger statusCode) {
+    } onFailure:^(NSError *error) {
         
         
         
@@ -210,7 +210,7 @@ typedef enum {
                                                                        }
                                                                        
                                                                    }
-                                                                   onFailure:^(NSError *error, NSInteger statusCode) {
+                                                                   onFailure:^(NSError *error) {
                                                                        
                                                                    }]; // Load departments for faculty
             
@@ -269,7 +269,7 @@ typedef enum {
                                                                      }
                                                                      
                                                                  }
-                                                                 onFailure:^(NSError *error, NSInteger statusCode) {
+                                                                 onFailure:^(NSError *error) {
                                                                      
                                                                  }]; // Load groups for department
             

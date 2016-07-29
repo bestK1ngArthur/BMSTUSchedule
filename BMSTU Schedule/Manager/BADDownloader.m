@@ -73,7 +73,7 @@
 #pragma mark - General information
 
 - (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
-                     onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+                     onFailure:(void (^)(NSError *error))failure {
     
     AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
     [self.sessionManager setResponseSerializer:responseSerializer];
@@ -94,9 +94,8 @@
                          
                          NSLog(@"Error(getWekNumber): %@", error);
                          
-                         #warning Fix failure return
                          if (failure) {
-                             failure(error, error.code);
+                             failure(error);
                          }
                          
                      }];
@@ -130,7 +129,7 @@
 #pragma mark - University structure
 
 - (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
-                          onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+                          onFailure:(void (^)(NSError *error))failure {
     
     [self.sessionManager GET:@"faculties/get/now/all"
                   parameters:nil
@@ -158,7 +157,7 @@
                          NSLog(@"Error(getWekNumber): %@", error);
                          
                          if (failure) {
-                             failure(error, error.code);
+                             failure(error);
                          }
                          
                      }];
@@ -200,7 +199,7 @@
 
 - (void)getListOfDepartmentsForFaculty:(BADUniversityFaculty *)faculty
                              onSuccess:(void (^)(NSArray *faculties))success
-                             onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+                             onFailure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             faculty.shortName, @"faculty", nil];
@@ -252,7 +251,7 @@
                          NSLog(@"Error(getListOfDepartments): %@", error);
                          
                          if (failure) {
-                             failure(error, error.code);
+                             failure(error);
                          }
                          
                      }];
@@ -315,8 +314,8 @@
 
 - (void)getListOfGroupsForDepartment:(BADUniversityDepartment *)department
                               course:(NSInteger)course
-                           onSuccess:(void (^)(NSArray *))success
-                           onFailure:(void (^)(NSError *, NSInteger))failure {
+                           onSuccess:(void (^)(NSArray *groups))success
+                           onFailure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             department.faculty.shortName, @"faculty",
@@ -351,7 +350,7 @@
                          NSLog(@"Error(getListOfGroups): %@", error);
                          
                          if (failure) {
-                             failure(error, error.code);
+                             failure(error);
                          }
                          
                      }];
@@ -397,7 +396,7 @@
 
 - (void)getScheduleForGroup:(BADUniversityGroup *)group
               onSuccess:(void (^)(BADUniversitySchedule *schedule))success
-              onFailure:(void (^)(NSError *error, NSInteger statusCode))failure {
+              onFailure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             group.department.faculty.shortName, @"faculty",
@@ -518,7 +517,7 @@
                          NSLog(@"Error(downloadSchedule): %@", error);
                          
                          if (failure) {
-                             failure(error, error.code);
+                             failure(error);
                          }
                          
                      }];

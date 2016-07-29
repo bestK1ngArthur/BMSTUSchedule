@@ -21,26 +21,26 @@
 // General information
 
 - (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
-                     onFailure:(void (^)(NSError *error, NSInteger statusCode))failure;
+                     onFailure:(void (^)(NSError *error))failure;
 
 // University structure
 
 - (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
-                          onFailure:(void (^)(NSError *error, NSInteger statusCode))failure;
+                          onFailure:(void (^)(NSError *error))failure;
 
 - (void)getListOfDepartmentsForFaculty:(BADUniversityFaculty *)faculty
                              onSuccess:(void (^)(NSArray *departmens))success
-                             onFailure:(void (^)(NSError *error, NSInteger statusCode))failure;
+                             onFailure:(void (^)(NSError *error))failure;
 
 - (void)getListOfGroupsForDepartment:(BADUniversityDepartment *)department
                               course:(NSInteger)course
                            onSuccess:(void (^)(NSArray *groups))success
-                           onFailure:(void (^)(NSError *error, NSInteger statusCode))failure;
+                           onFailure:(void (^)(NSError *error))failure;
 
 // Schedule
 
 - (void) getScheduleForGroup:(BADUniversityGroup *)group
                         onSuccess:(void (^)(BADUniversitySchedule *schedule))success
-                        onFailure:(void (^)(NSError *error, NSInteger statusCode))failure;
+                        onFailure:(void (^)(NSError *error))failure;
 
 @end

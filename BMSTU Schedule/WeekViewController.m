@@ -50,7 +50,7 @@
          self.navigationItem.title = [[NSString stringWithFormat:@"%ld", weekNumber] stringByAppendingString:@" неделя"];
          
      }
-     onFailure:^(NSError *error, NSInteger statusCode) {
+     onFailure:^(NSError *error) {
          
          self.weekNumber = 0;
          
@@ -82,7 +82,7 @@
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                                                                                   
                                                      }
-                                                     onFailure:^(NSError *error, NSInteger statusCode) {
+                                                     onFailure:^(NSError *error) {
                                                          
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          
