@@ -20,27 +20,27 @@
 
 // General information
 
-- (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
-                     onFailure:(void (^)(NSError *error))failure;
+- (void)getWeekNumberWithSuccess:(void (^)(NSInteger weekNumber))success
+                         failure:(void (^)(NSError *error))failure;
 
 // University structure
 
-- (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
-                          onFailure:(void (^)(NSError *error))failure;
+- (void)getListOfFacultiesWithSuccess:(void (^)(NSArray *faculties))success
+                              failure:(void (^)(NSError *error))failure;
 
 - (void)getListOfDepartmentsForFaculty:(BADUniversityFaculty *)faculty
-                             onSuccess:(void (^)(NSArray *departmens))success
-                             onFailure:(void (^)(NSError *error))failure;
+                               success:(void (^)(NSArray *departmens))success
+                               failure:(void (^)(NSError *error))failure;
 
 - (void)getListOfGroupsForDepartment:(BADUniversityDepartment *)department
                               course:(NSInteger)course
-                           onSuccess:(void (^)(NSArray *groups))success
-                           onFailure:(void (^)(NSError *error))failure;
+                             success:(void (^)(NSArray *groups))success
+                             failure:(void (^)(NSError *error))failure;
 
 // Schedule
 
 - (void) getScheduleForGroup:(BADUniversityGroup *)group
-                        onSuccess:(void (^)(BADUniversitySchedule *schedule))success
-                        onFailure:(void (^)(NSError *error))failure;
+                     success:(void (^)(BADUniversitySchedule *schedule))success
+                     failure:(void (^)(NSError *error))failure;
 
 @end

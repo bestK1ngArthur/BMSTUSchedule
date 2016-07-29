@@ -43,12 +43,12 @@
     self.weekNumber = 0;
     
     [[BADDownloader sharedDownloader]
-     getWeekNumberOnSuccess:^(NSInteger weekNumber) {
+     getWeekNumberWithSuccess:^(NSInteger weekNumber) {
          
          self.weekNumber = weekNumber;
          
      }
-     onFailure:^(NSError *error) {
+     failure:^(NSError *error) {
          
          self.weekNumber = 0;
          
@@ -70,7 +70,7 @@
     // Getting schedule
     
     [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
-                                                     onSuccess:^(BADUniversitySchedule *schedule) {
+                                                     success:^(BADUniversitySchedule *schedule) {
                                                          
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          
@@ -114,7 +114,7 @@
                                                          [self.tableView reloadData];
                                                          
                                                      }
-                                                     onFailure:^(NSError *error) {
+                                                     failure:^(NSError *error) {
                                                          
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          

@@ -43,14 +43,14 @@
     self.weekNumber = 0;
     
     [[BADDownloader sharedDownloader]
-     getWeekNumberOnSuccess:^(NSInteger weekNumber) {
+     getWeekNumberWithSuccess:^(NSInteger weekNumber) {
          
          self.weekNumber = weekNumber;
          
          self.navigationItem.title = [[NSString stringWithFormat:@"%ld", weekNumber] stringByAppendingString:@" неделя"];
          
      }
-     onFailure:^(NSError *error) {
+     failure:^(NSError *error) {
          
          self.weekNumber = 0;
          
@@ -72,7 +72,7 @@
     // Getting schedule
     
     [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
-                                                     onSuccess:^(BADUniversitySchedule *schedule) {
+                                                     success:^(BADUniversitySchedule *schedule) {
                                                          
                                                          BADHandler *handler = [[BADHandler alloc] init];
                                                          self.currentSchedule = [handler handleSchedule:schedule];
@@ -82,7 +82,7 @@
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                                                                                   
                                                      }
-                                                     onFailure:^(NSError *error) {
+                                                     failure:^(NSError *error) {
                                                          
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                          

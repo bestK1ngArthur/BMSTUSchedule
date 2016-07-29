@@ -72,8 +72,8 @@
 
 #pragma mark - General information
 
-- (void)getWeekNumberOnSuccess:(void (^)(NSInteger weekNumber))success
-                     onFailure:(void (^)(NSError *error))failure {
+- (void)getWeekNumberWithSuccess:(void (^)(NSInteger weekNumber))success
+                     failure:(void (^)(NSError *error))failure {
     
     AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
     [self.sessionManager setResponseSerializer:responseSerializer];
@@ -128,8 +128,8 @@
 
 #pragma mark - University structure
 
-- (void)getListOfFacultiesOnSuccess:(void (^)(NSArray *faculties))success
-                          onFailure:(void (^)(NSError *error))failure {
+- (void)getListOfFacultiesWithSuccess:(void (^)(NSArray *faculties))success
+                          failure:(void (^)(NSError *error))failure {
     
     [self.sessionManager GET:@"faculties/get/now/all"
                   parameters:nil
@@ -198,8 +198,8 @@
 }
 
 - (void)getListOfDepartmentsForFaculty:(BADUniversityFaculty *)faculty
-                             onSuccess:(void (^)(NSArray *faculties))success
-                             onFailure:(void (^)(NSError *error))failure {
+                             success:(void (^)(NSArray *faculties))success
+                             failure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             faculty.shortName, @"faculty", nil];
@@ -314,8 +314,8 @@
 
 - (void)getListOfGroupsForDepartment:(BADUniversityDepartment *)department
                               course:(NSInteger)course
-                           onSuccess:(void (^)(NSArray *groups))success
-                           onFailure:(void (^)(NSError *error))failure {
+                           success:(void (^)(NSArray *groups))success
+                           failure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             department.faculty.shortName, @"faculty",
@@ -395,8 +395,8 @@
 #pragma mark - Schedule
 
 - (void)getScheduleForGroup:(BADUniversityGroup *)group
-              onSuccess:(void (^)(BADUniversitySchedule *schedule))success
-              onFailure:(void (^)(NSError *error))failure {
+              success:(void (^)(BADUniversitySchedule *schedule))success
+              failure:(void (^)(NSError *error))failure {
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             group.department.faculty.shortName, @"faculty",

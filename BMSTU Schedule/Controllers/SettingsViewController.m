@@ -42,7 +42,7 @@ typedef enum {
     
     self.courses = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
     
-    [[BADDownloader sharedDownloader] getListOfFacultiesOnSuccess:^(NSArray *faculties) {
+    [[BADDownloader sharedDownloader] getListOfFacultiesWithSuccess:^(NSArray *faculties) {
         
         self.faculties = faculties;
         [self.groupPicker reloadAllComponents];
@@ -62,7 +62,7 @@ typedef enum {
             }
         }
         
-    } onFailure:^(NSError *error) {
+    } failure:^(NSError *error) {
         
         
         
@@ -175,7 +175,7 @@ typedef enum {
             self.selectedFaculty = [self.faculties objectAtIndex:row];
             
             [[BADDownloader sharedDownloader] getListOfDepartmentsForFaculty:self.selectedFaculty
-                                                                   onSuccess:^(NSArray *faculties) {
+                                                                   success:^(NSArray *faculties) {
                                                                        
                                                                        self.departments = faculties;
                                                                        
@@ -210,7 +210,7 @@ typedef enum {
                                                                        }
                                                                        
                                                                    }
-                                                                   onFailure:^(NSError *error) {
+                                                                   failure:^(NSError *error) {
                                                                        
                                                                    }]; // Load departments for faculty
             
@@ -235,7 +235,7 @@ typedef enum {
             
             [[BADDownloader sharedDownloader] getListOfGroupsForDepartment:self.selectedDepartment
                                                                     course:[[self.courses objectAtIndex:row] integerValue]
-                                                                 onSuccess:^(NSArray *groups) {
+                                                                 success:^(NSArray *groups) {
                                                                      
                                                                      self.groups = groups;
                                                                      
@@ -269,7 +269,7 @@ typedef enum {
                                                                      }
                                                                      
                                                                  }
-                                                                 onFailure:^(NSError *error) {
+                                                                 failure:^(NSError *error) {
                                                                      
                                                                  }]; // Load groups for department
             
