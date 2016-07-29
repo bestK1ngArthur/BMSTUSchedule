@@ -71,21 +71,22 @@ typedef enum {
 }
 
 - (void)didReceiveMemoryWarning {
+
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 #pragma mark - UIPickerViewDataSource
 
 // The number of columns of data
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
     return 4;
 }
 
 // The number of rows of data
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         
@@ -125,8 +126,7 @@ typedef enum {
 }
 
 // The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         

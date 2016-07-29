@@ -161,6 +161,31 @@
     
 }
 
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *testAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Добавить" handler:^(UITableViewRowAction *testAction, NSIndexPath *indexPath){
+
+        UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Уведомление"
+                                                                    message:@"Пиздец какое клёвое уведомление"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"Ладненько"
+                                                          otherButtonTitles:nil, nil];
+        
+        [notificationAlert show];
+        
+        [self.tableView setEditing:NO];
+        
+    }];
+    
+    testAction.backgroundColor = [UIColor colorWithRed:  77 / 255.f
+                                                 green: 179 / 255.f
+                                                  blue: 214 / 255.f
+                                                 alpha: 1.f];
+    
+    return @[testAction];
+}
+
+
 #pragma mark - UITableViewDataSource
 
 /*
@@ -177,6 +202,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    #warning Fix current day
+    
     if ([self.currentDay.classes count] == 0) {
         
         self.navigationItem.title = @"Воскресенье";
@@ -188,6 +215,7 @@
         return [self.currentDay.classes count];
 
     }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

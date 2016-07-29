@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48CCCC78DD3F360D52FABEDE /* libPods-BMSTU ScheduleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4B1C885EEA30AA9D4FF37 /* libPods-BMSTU ScheduleUITests.a */; };
+		4BC967A31B5764CB03D1A95E /* libPods-BMSTU ScheduleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B3B76931C7BC713B0C35DA /* libPods-BMSTU ScheduleTests.a */; };
 		68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68474BC31C725FAD0079B5D8 /* SettingsViewController.m */; };
 		6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6856E4C01C6BD82B0042E866 /* TodayViewController.m */; };
 		68B119971C7A19C700BBBE36 /* UniversityNoClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B119951C7A19C700BBBE36 /* UniversityNoClassCell.m */; };
@@ -19,26 +21,9 @@
 		68C377891C3406B3007DD412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C377871C3406B3007DD412 /* LaunchScreen.storyboard */; };
 		68C377941C3406B3007DD412 /* BMSTU_ScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C377931C3406B3007DD412 /* BMSTU_ScheduleTests.m */; };
 		68C3779F1C3406B3007DD412 /* BMSTU_ScheduleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3779E1C3406B3007DD412 /* BMSTU_ScheduleUITests.m */; };
-		68C379011C341DEE007DD412 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378D51C341DEE007DD412 /* AFHTTPRequestOperation.m */; };
-		68C379021C341DEE007DD412 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378D71C341DEE007DD412 /* AFHTTPRequestOperationManager.m */; };
-		68C379031C341DEE007DD412 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378D91C341DEE007DD412 /* AFHTTPSessionManager.m */; };
-		68C379041C341DEE007DD412 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378DC1C341DEE007DD412 /* AFNetworkReachabilityManager.m */; };
-		68C379051C341DEE007DD412 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378DE1C341DEE007DD412 /* AFSecurityPolicy.m */; };
-		68C379061C341DEE007DD412 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378E01C341DEE007DD412 /* AFURLConnectionOperation.m */; };
-		68C379071C341DEE007DD412 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378E21C341DEE007DD412 /* AFURLRequestSerialization.m */; };
-		68C379081C341DEE007DD412 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378E41C341DEE007DD412 /* AFURLResponseSerialization.m */; };
-		68C379091C341DEE007DD412 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378E61C341DEE007DD412 /* AFURLSessionManager.m */; };
 		68C3790A1C341DEE007DD412 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378E91C341DEE007DD412 /* TFHpple.m */; };
 		68C3790B1C341DEE007DD412 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378EB1C341DEE007DD412 /* TFHppleElement.m */; };
 		68C3790C1C341DEE007DD412 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378ED1C341DEE007DD412 /* XPathQuery.m */; };
-		68C3790D1C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378F01C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m */; };
-		68C3790E1C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378F21C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m */; };
-		68C3790F1C341DEE007DD412 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378F41C341DEE007DD412 /* UIAlertView+AFNetworking.m */; };
-		68C379101C341DEE007DD412 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378F61C341DEE007DD412 /* UIButton+AFNetworking.m */; };
-		68C379111C341DEE007DD412 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378F91C341DEE007DD412 /* UIImageView+AFNetworking.m */; };
-		68C379121C341DEE007DD412 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378FC1C341DEE007DD412 /* UIProgressView+AFNetworking.m */; };
-		68C379131C341DEE007DD412 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C378FE1C341DEE007DD412 /* UIRefreshControl+AFNetworking.m */; };
-		68C379141C341DEE007DD412 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379001C341DEE007DD412 /* UIWebView+AFNetworking.m */; };
 		68C379161C341E47007DD412 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C379151C341E47007DD412 /* libxml2.2.tbd */; };
 		68C3791A1C342087007DD412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379181C342087007DD412 /* main.m */; };
 		68C379331C3530FB007DD412 /* BADDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C3792C1C3530FB007DD412 /* BADDownloader.m */; };
@@ -51,6 +36,9 @@
 		68C379471C353163007DD412 /* BADUniversityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379421C353163007DD412 /* BADUniversityGroup.m */; };
 		68C66E581C54AEC800C318D6 /* BADUniversityDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E571C54AEC800C318D6 /* BADUniversityDay.m */; };
 		68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */; };
+		8EAEAF590C4B0B9D0F431CBD /* libPods-BMSTU Schedule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */; };
+		CF4FB5134F3C495CEA1F4A20 /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */; };
+		D3B15284F9393E31A3346A91 /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31AB506CECF6D850877249B /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +59,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2331248CC15BDCC6E35F23AC /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule-BMSTU ScheduleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleUITests/Pods-BMSTU Schedule-BMSTU ScheduleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40B3B76931C7BC713B0C35DA /* libPods-BMSTU ScheduleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU ScheduleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		455616C485658EE61B4606F9 /* Pods-BMSTU ScheduleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU ScheduleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU ScheduleTests/Pods-BMSTU ScheduleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		478E854CEA9789154E426451 /* Pods-BMSTU ScheduleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU ScheduleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU ScheduleTests/Pods-BMSTU ScheduleTests.release.xcconfig"; sourceTree = "<group>"; };
+		5427A00A74AB2CF4A0AA66BE /* Pods-BMSTU Schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule.debug.xcconfig"; sourceTree = "<group>"; };
+		544EC95D961C402861629C60 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule-BMSTU ScheduleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleTests/Pods-BMSTU Schedule-BMSTU ScheduleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5788696B8E5E6DAA4E22C93D /* Pods-BMSTU Schedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule.release.xcconfig"; sourceTree = "<group>"; };
+		6084781DAFA8382CA864750D /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule-BMSTU ScheduleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleUITests/Pods-BMSTU Schedule-BMSTU ScheduleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60A4B1C885EEA30AA9D4FF37 /* libPods-BMSTU ScheduleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU ScheduleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6824E7D04F88F89782AF61F8 /* Pods-BMSTU ScheduleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU ScheduleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU ScheduleUITests/Pods-BMSTU ScheduleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68474BC21C725FAD0079B5D8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
 		68474BC31C725FAD0079B5D8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		6856E4BF1C6BD82B0042E866 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayViewController.h; path = Controllers/TodayViewController.h; sourceTree = "<group>"; };
@@ -93,49 +91,12 @@
 		68C3779A1C3406B3007DD412 /* BMSTU ScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSTU ScheduleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C3779E1C3406B3007DD412 /* BMSTU_ScheduleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMSTU_ScheduleUITests.m; sourceTree = "<group>"; };
 		68C377A01C3406B3007DD412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68C378D41C341DEE007DD412 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		68C378D51C341DEE007DD412 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		68C378D61C341DEE007DD412 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		68C378D71C341DEE007DD412 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		68C378D81C341DEE007DD412 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		68C378D91C341DEE007DD412 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		68C378DA1C341DEE007DD412 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		68C378DB1C341DEE007DD412 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		68C378DC1C341DEE007DD412 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		68C378DD1C341DEE007DD412 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		68C378DE1C341DEE007DD412 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		68C378DF1C341DEE007DD412 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		68C378E01C341DEE007DD412 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		68C378E11C341DEE007DD412 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		68C378E21C341DEE007DD412 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		68C378E31C341DEE007DD412 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		68C378E41C341DEE007DD412 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		68C378E51C341DEE007DD412 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		68C378E61C341DEE007DD412 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		68C378E81C341DEE007DD412 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		68C378E91C341DEE007DD412 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		68C378EA1C341DEE007DD412 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
 		68C378EB1C341DEE007DD412 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		68C378EC1C341DEE007DD412 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		68C378ED1C341DEE007DD412 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		68C378EF1C341DEE007DD412 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		68C378F01C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		68C378F11C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378F21C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378F31C341DEE007DD412 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378F41C341DEE007DD412 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378F51C341DEE007DD412 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378F61C341DEE007DD412 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378F71C341DEE007DD412 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378F81C341DEE007DD412 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378F91C341DEE007DD412 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378FA1C341DEE007DD412 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378FB1C341DEE007DD412 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378FC1C341DEE007DD412 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378FD1C341DEE007DD412 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		68C378FE1C341DEE007DD412 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		68C378FF1C341DEE007DD412 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		68C379001C341DEE007DD412 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		68C379151C341E47007DD412 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = ../../../Desktop/libxml2.2.tbd; sourceTree = "<group>"; };
 		68C379171C342087007DD412 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "BMSTU Schedule/Info.plist"; sourceTree = "<group>"; };
 		68C379181C342087007DD412 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "BMSTU Schedule/main.m"; sourceTree = "<group>"; };
@@ -159,6 +120,11 @@
 		68C66E571C54AEC800C318D6 /* BADUniversityDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityDay.m; sourceTree = "<group>"; };
 		68C66E5A1C54BFA100C318D6 /* UniversityClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityClassCell.h; sourceTree = "<group>"; };
 		68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityClassCell.m; sourceTree = "<group>"; };
+		A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31AB506CECF6D850877249B /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D6ADF3F55AADC726F927E1 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleTests/Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBE3A7171DD43342EAD0B684 /* Pods-BMSTU ScheduleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU ScheduleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU ScheduleUITests/Pods-BMSTU ScheduleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C379161C341E47007DD412 /* libxml2.2.tbd in Frameworks */,
+				8EAEAF590C4B0B9D0F431CBD /* libPods-BMSTU Schedule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC967A31B5764CB03D1A95E /* libPods-BMSTU ScheduleTests.a in Frameworks */,
+				D3B15284F9393E31A3346A91 /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,12 +150,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CCCC78DD3F360D52FABEDE /* libPods-BMSTU ScheduleUITests.a in Frameworks */,
+				CF4FB5134F3C495CEA1F4A20 /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01F2EEF3E45CEEC853E2022C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5427A00A74AB2CF4A0AA66BE /* Pods-BMSTU Schedule.debug.xcconfig */,
+				5788696B8E5E6DAA4E22C93D /* Pods-BMSTU Schedule.release.xcconfig */,
+				455616C485658EE61B4606F9 /* Pods-BMSTU ScheduleTests.debug.xcconfig */,
+				478E854CEA9789154E426451 /* Pods-BMSTU ScheduleTests.release.xcconfig */,
+				6824E7D04F88F89782AF61F8 /* Pods-BMSTU ScheduleUITests.debug.xcconfig */,
+				DBE3A7171DD43342EAD0B684 /* Pods-BMSTU ScheduleUITests.release.xcconfig */,
+				544EC95D961C402861629C60 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.debug.xcconfig */,
+				D8D6ADF3F55AADC726F927E1 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig */,
+				2331248CC15BDCC6E35F23AC /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.debug.xcconfig */,
+				6084781DAFA8382CA864750D /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6856E4C21C6BD8360042E866 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +196,8 @@
 				68C377921C3406B3007DD412 /* BMSTU ScheduleTests */,
 				68C3779D1C3406B3007DD412 /* BMSTU ScheduleUITests */,
 				68C377741C3406B3007DD412 /* Products */,
+				01F2EEF3E45CEEC853E2022C /* Pods */,
+				AB3C85D1CEBFA4304AFC0AE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,37 +258,9 @@
 		68C378D21C341DEE007DD412 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				68C378D31C341DEE007DD412 /* AFNetworking */,
 				68C378E71C341DEE007DD412 /* TFHpple */,
-				68C378EE1C341DEE007DD412 /* UIKit+AFNetworking */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		68C378D31C341DEE007DD412 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				68C378D41C341DEE007DD412 /* AFHTTPRequestOperation.h */,
-				68C378D51C341DEE007DD412 /* AFHTTPRequestOperation.m */,
-				68C378D61C341DEE007DD412 /* AFHTTPRequestOperationManager.h */,
-				68C378D71C341DEE007DD412 /* AFHTTPRequestOperationManager.m */,
-				68C378D81C341DEE007DD412 /* AFHTTPSessionManager.h */,
-				68C378D91C341DEE007DD412 /* AFHTTPSessionManager.m */,
-				68C378DA1C341DEE007DD412 /* AFNetworking.h */,
-				68C378DB1C341DEE007DD412 /* AFNetworkReachabilityManager.h */,
-				68C378DC1C341DEE007DD412 /* AFNetworkReachabilityManager.m */,
-				68C378DD1C341DEE007DD412 /* AFSecurityPolicy.h */,
-				68C378DE1C341DEE007DD412 /* AFSecurityPolicy.m */,
-				68C378DF1C341DEE007DD412 /* AFURLConnectionOperation.h */,
-				68C378E01C341DEE007DD412 /* AFURLConnectionOperation.m */,
-				68C378E11C341DEE007DD412 /* AFURLRequestSerialization.h */,
-				68C378E21C341DEE007DD412 /* AFURLRequestSerialization.m */,
-				68C378E31C341DEE007DD412 /* AFURLResponseSerialization.h */,
-				68C378E41C341DEE007DD412 /* AFURLResponseSerialization.m */,
-				68C378E51C341DEE007DD412 /* AFURLSessionManager.h */,
-				68C378E61C341DEE007DD412 /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		68C378E71C341DEE007DD412 /* TFHpple */ = {
@@ -312,31 +274,6 @@
 				68C378ED1C341DEE007DD412 /* XPathQuery.m */,
 			);
 			path = TFHpple;
-			sourceTree = "<group>";
-		};
-		68C378EE1C341DEE007DD412 /* UIKit+AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				68C378EF1C341DEE007DD412 /* AFNetworkActivityIndicatorManager.h */,
-				68C378F01C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m */,
-				68C378F11C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.h */,
-				68C378F21C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m */,
-				68C378F31C341DEE007DD412 /* UIAlertView+AFNetworking.h */,
-				68C378F41C341DEE007DD412 /* UIAlertView+AFNetworking.m */,
-				68C378F51C341DEE007DD412 /* UIButton+AFNetworking.h */,
-				68C378F61C341DEE007DD412 /* UIButton+AFNetworking.m */,
-				68C378F71C341DEE007DD412 /* UIImage+AFNetworking.h */,
-				68C378F81C341DEE007DD412 /* UIImageView+AFNetworking.h */,
-				68C378F91C341DEE007DD412 /* UIImageView+AFNetworking.m */,
-				68C378FA1C341DEE007DD412 /* UIKit+AFNetworking.h */,
-				68C378FB1C341DEE007DD412 /* UIProgressView+AFNetworking.h */,
-				68C378FC1C341DEE007DD412 /* UIProgressView+AFNetworking.m */,
-				68C378FD1C341DEE007DD412 /* UIRefreshControl+AFNetworking.h */,
-				68C378FE1C341DEE007DD412 /* UIRefreshControl+AFNetworking.m */,
-				68C378FF1C341DEE007DD412 /* UIWebView+AFNetworking.h */,
-				68C379001C341DEE007DD412 /* UIWebView+AFNetworking.m */,
-			);
-			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
 		68C3791B1C34208D007DD412 /* Supporting files */ = {
@@ -401,6 +338,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		AB3C85D1CEBFA4304AFC0AE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */,
+				40B3B76931C7BC713B0C35DA /* libPods-BMSTU ScheduleTests.a */,
+				60A4B1C885EEA30AA9D4FF37 /* libPods-BMSTU ScheduleUITests.a */,
+				B31AB506CECF6D850877249B /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a */,
+				A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,9 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A31C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU Schedule" */;
 			buildPhases = (
+				59B0767A4CFDC841BE1D1627 /* 📦 Check Pods Manifest.lock */,
 				68C3776F1C3406B3007DD412 /* Sources */,
 				68C377701C3406B3007DD412 /* Frameworks */,
 				68C377711C3406B3007DD412 /* Resources */,
+				F9DF70E2F29E927EC1F673A8 /* 📦 Embed Pods Frameworks */,
+				07AE5C7CFB53285E61019DF9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,9 +377,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A61C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleTests" */;
 			buildPhases = (
+				817E2A2534ECA9FFF5FE98CC /* 📦 Check Pods Manifest.lock */,
 				68C3778B1C3406B3007DD412 /* Sources */,
 				68C3778C1C3406B3007DD412 /* Frameworks */,
 				68C3778D1C3406B3007DD412 /* Resources */,
+				3D76ADCA84C027AE1DB2C4B4 /* 📦 Embed Pods Frameworks */,
+				507F628BC97CA3CE7FAC6D7E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,9 +398,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A91C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleUITests" */;
 			buildPhases = (
+				CD4E1EBAFF8C0B86E5BF3B15 /* 📦 Check Pods Manifest.lock */,
 				68C377961C3406B3007DD412 /* Sources */,
 				68C377971C3406B3007DD412 /* Frameworks */,
 				68C377981C3406B3007DD412 /* Resources */,
+				0C0306950BA47D5E93A80BE5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -531,47 +488,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07AE5C7CFB53285E61019DF9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C0306950BA47D5E93A80BE5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleUITests/Pods-BMSTU Schedule-BMSTU ScheduleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D76ADCA84C027AE1DB2C4B4 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleTests/Pods-BMSTU Schedule-BMSTU ScheduleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507F628BC97CA3CE7FAC6D7E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleTests/Pods-BMSTU Schedule-BMSTU ScheduleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59B0767A4CFDC841BE1D1627 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		817E2A2534ECA9FFF5FE98CC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4E1EBAFF8C0B86E5BF3B15 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DF70E2F29E927EC1F673A8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68C3776F1C3406B3007DD412 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				68C3790B1C341DEE007DD412 /* TFHppleElement.m in Sources */,
-				68C379091C341DEE007DD412 /* AFURLSessionManager.m in Sources */,
 				68C3790C1C341DEE007DD412 /* XPathQuery.m in Sources */,
 				6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */,
-				68C379061C341DEE007DD412 /* AFURLConnectionOperation.m in Sources */,
 				68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */,
-				68C379011C341DEE007DD412 /* AFHTTPRequestOperation.m in Sources */,
 				68C379471C353163007DD412 /* BADUniversityGroup.m in Sources */,
-				68C3790D1C341DEE007DD412 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				68C379431C353163007DD412 /* BADUniversityClass.m in Sources */,
 				68C379441C353163007DD412 /* BADUniversitySchedule.m in Sources */,
 				68B119971C7A19C700BBBE36 /* UniversityNoClassCell.m in Sources */,
 				68C66E581C54AEC800C318D6 /* BADUniversityDay.m in Sources */,
 				68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */,
-				68C379021C341DEE007DD412 /* AFHTTPRequestOperationManager.m in Sources */,
-				68C379031C341DEE007DD412 /* AFHTTPSessionManager.m in Sources */,
 				68C379451C353163007DD412 /* BADUniversityDepartment.m in Sources */,
 				68C379331C3530FB007DD412 /* BADDownloader.m in Sources */,
-				68C379111C341DEE007DD412 /* UIImageView+AFNetworking.m in Sources */,
 				68C379361C3530FB007DD412 /* BADSaver.m in Sources */,
-				68C379121C341DEE007DD412 /* UIProgressView+AFNetworking.m in Sources */,
-				68C379131C341DEE007DD412 /* UIRefreshControl+AFNetworking.m in Sources */,
 				68C3777E1C3406B3007DD412 /* WeekViewController.m in Sources */,
-				68C379101C341DEE007DD412 /* UIButton+AFNetworking.m in Sources */,
-				68C3790E1C341DEE007DD412 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				68C379051C341DEE007DD412 /* AFSecurityPolicy.m in Sources */,
 				68C379341C3530FB007DD412 /* BADHandler.m in Sources */,
 				68C3790A1C341DEE007DD412 /* TFHpple.m in Sources */,
 				68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */,
-				68C379071C341DEE007DD412 /* AFURLRequestSerialization.m in Sources */,
-				68C379041C341DEE007DD412 /* AFNetworkReachabilityManager.m in Sources */,
-				68C379141C341DEE007DD412 /* UIWebView+AFNetworking.m in Sources */,
 				68C379461C353163007DD412 /* BADUniversityFaculty.m in Sources */,
-				68C379081C341DEE007DD412 /* AFURLResponseSerialization.m in Sources */,
 				68C3791A1C342087007DD412 /* main.m in Sources */,
-				68C3790F1C341DEE007DD412 /* UIAlertView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +771,7 @@
 		};
 		68C377A41C3406B3007DD412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5427A00A74AB2CF4A0AA66BE /* Pods-BMSTU Schedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
@@ -721,6 +785,7 @@
 		};
 		68C377A51C3406B3007DD412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5788696B8E5E6DAA4E22C93D /* Pods-BMSTU Schedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
@@ -734,6 +799,7 @@
 		};
 		68C377A71C3406B3007DD412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544EC95D961C402861629C60 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BMSTU ScheduleTests/Info.plist";
@@ -746,6 +812,7 @@
 		};
 		68C377A81C3406B3007DD412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8D6ADF3F55AADC726F927E1 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BMSTU ScheduleTests/Info.plist";
@@ -758,6 +825,7 @@
 		};
 		68C377AA1C3406B3007DD412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2331248CC15BDCC6E35F23AC /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "BMSTU ScheduleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -770,6 +838,7 @@
 		};
 		68C377AB1C3406B3007DD412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6084781DAFA8382CA864750D /* Pods-BMSTU Schedule-BMSTU ScheduleUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "BMSTU ScheduleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
