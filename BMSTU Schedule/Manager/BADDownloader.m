@@ -19,7 +19,6 @@
 #import "BADUniversityDay.h"
 #import "BADUniversityClass.h"
 
-
 @interface BADDownloader ()
 
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
