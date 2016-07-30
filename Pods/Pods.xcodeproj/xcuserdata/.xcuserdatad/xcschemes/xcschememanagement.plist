@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BMSTU Schedule-BMSTU ScheduleTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-BMSTU Schedule-BMSTU ScheduleUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-BMSTU Schedule.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BMSTU ScheduleTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BMSTU ScheduleUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

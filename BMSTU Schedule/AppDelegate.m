@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import Firebase;
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
                                                          green: 179 / 255.f
                                                           blue: 214 / 255.f
                                                          alpha: 1.f]];
+    [FIRApp configure];
+    
     return YES;
 }
 

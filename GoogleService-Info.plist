@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1007180138314-fio5a6lo3ikcmh9q4dk2nsl8ilhvir84.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1007180138314-fio5a6lo3ikcmh9q4dk2nsl8ilhvir84</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAAVn4P2CBCHiJ3WUxLRP5ZokNMDg79ht4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1007180138314</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bestK1ng.BMSTUSchedule</string>
+	<key>PROJECT_ID</key>
+	<string>bmstuschedule</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bmstuschedule.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1007180138314:ios:15d32b38a7d64bcd</string>
+	<key>DATABASE_URL</key>
+	<string>https://bmstuschedule.firebaseio.com</string>
+</dict>
+</plist>

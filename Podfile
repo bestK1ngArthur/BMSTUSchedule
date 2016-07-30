@@ -5,6 +5,7 @@ target 'BMSTU Schedule' do
 
   # Pods for BMSTU
   pod 'AFNetworking'
+  pod 'Firebase'
 
   target 'BMSTU ScheduleTests' do
     inherit! :search_paths
