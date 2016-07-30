@@ -19,8 +19,6 @@
 #import "BADUniversityDay.h"
 #import "BADUniversityClass.h"
 
-#warning Fix bug with commits
-
 @interface BADDownloader ()
 
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
