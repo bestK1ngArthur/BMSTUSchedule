@@ -1,5 +1,7 @@
 # BMSTUSchedule
 
+![ScreenShot](https://raw.githubusercontent.com/bestK1ngArthur/BMSTUSchedule/master/ScreenShot.png)
+
 iOS приложение с расписанием занятий студентов в "Бауманке"
 
 ## Статус
