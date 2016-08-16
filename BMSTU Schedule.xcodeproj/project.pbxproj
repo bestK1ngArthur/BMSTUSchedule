@@ -33,6 +33,7 @@
 		68C66E581C54AEC800C318D6 /* BADUniversityDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E571C54AEC800C318D6 /* BADUniversityDay.m */; };
 		68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */; };
 		8EAEAF590C4B0B9D0F431CBD /* libPods-BMSTU Schedule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */; };
+		A549B04C1D63187C00A3D015 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = A549B04B1D63187C00A3D015 /* ScreenShot.png */; };
 		A55943AD1D50DF7F00450394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */; };
 		A59F85641D50AA5900B83824 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A59F85631D50AA5900B83824 /* Podfile */; };
 		CF4FB5134F3C495CEA1F4A20 /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */; };
@@ -112,6 +113,7 @@
 		68C66E5A1C54BFA100C318D6 /* UniversityClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityClassCell.h; sourceTree = "<group>"; };
 		68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityClassCell.m; sourceTree = "<group>"; };
 		A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A549B04B1D63187C00A3D015 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "BMSTU Schedule.entitlements"; path = "BMSTU Schedule/BMSTU Schedule.entitlements"; sourceTree = "<group>"; };
 		A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BMSTU Schedule/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A59F85631D50AA5900B83824 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -250,6 +252,7 @@
 		68C3791B1C34208D007DD412 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				A549B04B1D63187C00A3D015 /* ScreenShot.png */,
 				A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */,
 				A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */,
 				68C379171C342087007DD412 /* Info.plist */,
@@ -453,6 +456,7 @@
 				68C377841C3406B3007DD412 /* Main.storyboard in Resources */,
 				A59F85641D50AA5900B83824 /* Podfile in Resources */,
 				A55943AD1D50DF7F00450394 /* GoogleService-Info.plist in Resources */,
+				A549B04C1D63187C00A3D015 /* ScreenShot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
