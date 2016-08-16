@@ -9,7 +9,6 @@
 #import "BADDownloader.h"
 
 #import "AFNetworking.h"
-#import "TFHpple.h"
 
 #import "BADUniversityGroup.h"
 #import "BADUniversityDepartment.h"

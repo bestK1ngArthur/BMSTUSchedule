@@ -9,7 +9,6 @@
 #import "BADUniversityFaculty.h"
 #import "BADUniversityDepartment.h"
 
-#import "TFHpple.h"
 #import "AFNetworking.h"
 
 @implementation BADUniversityFaculty
