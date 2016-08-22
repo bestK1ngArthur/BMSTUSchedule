@@ -2,6 +2,8 @@
 
 iOS приложение с расписанием занятий студентов в "Бауманке"
 
+![ScreenShot](https://raw.githubusercontent.com/bestK1ngArthur/BMSTUSchedule/master/ScreenShot.png)
+
 ## Статус
 
 В Винтерфеле - зима, потому не до приложений сечас. Есть более насущные проблемы. 
