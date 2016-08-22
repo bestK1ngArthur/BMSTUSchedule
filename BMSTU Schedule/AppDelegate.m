@@ -37,6 +37,10 @@
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
+    #warning Push Notification aren't working
+    
+    
+    
     return YES;
 }
 
