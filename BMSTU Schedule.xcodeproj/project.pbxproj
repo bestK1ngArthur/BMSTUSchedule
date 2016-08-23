@@ -24,18 +24,18 @@
 		68C3791A1C342087007DD412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C379181C342087007DD412 /* main.m */; };
 		68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */; };
 		8EAEAF590C4B0B9D0F431CBD /* libPods-BMSTU Schedule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */; };
-		A51C14611D6B667200F49CAC /* BADDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C144D1D6B667200F49CAC /* BADDownloader.m */; };
-		A51C14621D6B667200F49CAC /* BADHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C144F1D6B667200F49CAC /* BADHandler.m */; };
-		A51C14631D6B667200F49CAC /* BADSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C14511D6B667200F49CAC /* BADSaver.m */; };
-		A51C14641D6B667200F49CAC /* BADUniversityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C14551D6B667200F49CAC /* BADUniversityClass.m */; };
-		A51C14651D6B667200F49CAC /* BADUniversityDay.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C14571D6B667200F49CAC /* BADUniversityDay.m */; };
-		A51C14661D6B667200F49CAC /* BADUniversitySchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C14591D6B667200F49CAC /* BADUniversitySchedule.m */; };
-		A51C14671D6B667200F49CAC /* BADUniversityDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C145C1D6B667200F49CAC /* BADUniversityDepartment.m */; };
-		A51C14681D6B667200F49CAC /* BADUniversityFaculty.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C145E1D6B667200F49CAC /* BADUniversityFaculty.m */; };
-		A51C14691D6B667200F49CAC /* BADUniversityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C14601D6B667200F49CAC /* BADUniversityGroup.m */; };
 		A549B04C1D63187C00A3D015 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = A549B04B1D63187C00A3D015 /* ScreenShot.png */; };
 		A55943AD1D50DF7F00450394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */; };
 		A59F85641D50AA5900B83824 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A59F85631D50AA5900B83824 /* Podfile */; };
+		A5A3F8EC1D6C55BD002C6585 /* BADDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8D81D6C55BD002C6585 /* BADDownloader.m */; };
+		A5A3F8ED1D6C55BD002C6585 /* BADHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8DA1D6C55BD002C6585 /* BADHandler.m */; };
+		A5A3F8EE1D6C55BD002C6585 /* BADSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8DC1D6C55BD002C6585 /* BADSaver.m */; };
+		A5A3F8EF1D6C55BD002C6585 /* BADUniversityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8E01D6C55BD002C6585 /* BADUniversityClass.m */; };
+		A5A3F8F01D6C55BD002C6585 /* BADUniversityDay.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8E21D6C55BD002C6585 /* BADUniversityDay.m */; };
+		A5A3F8F11D6C55BD002C6585 /* BADUniversitySchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8E41D6C55BD002C6585 /* BADUniversitySchedule.m */; };
+		A5A3F8F21D6C55BD002C6585 /* BADUniversityDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8E71D6C55BD002C6585 /* BADUniversityDepartment.m */; };
+		A5A3F8F31D6C55BD002C6585 /* BADUniversityFaculty.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8E91D6C55BD002C6585 /* BADUniversityFaculty.m */; };
+		A5A3F8F41D6C55BD002C6585 /* BADUniversityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8EB1D6C55BD002C6585 /* BADUniversityGroup.m */; };
 		CF4FB5134F3C495CEA1F4A20 /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */; };
 		D3B15284F9393E31A3346A91 /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31AB506CECF6D850877249B /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a */; };
 /* End PBXBuildFile section */
@@ -95,28 +95,28 @@
 		68C66E5A1C54BFA100C318D6 /* UniversityClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityClassCell.h; sourceTree = "<group>"; };
 		68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityClassCell.m; sourceTree = "<group>"; };
 		A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51C144C1D6B667200F49CAC /* BADDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADDownloader.h; sourceTree = "<group>"; };
-		A51C144D1D6B667200F49CAC /* BADDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADDownloader.m; sourceTree = "<group>"; };
-		A51C144E1D6B667200F49CAC /* BADHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADHandler.h; sourceTree = "<group>"; };
-		A51C144F1D6B667200F49CAC /* BADHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADHandler.m; sourceTree = "<group>"; };
-		A51C14501D6B667200F49CAC /* BADSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADSaver.h; sourceTree = "<group>"; };
-		A51C14511D6B667200F49CAC /* BADSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADSaver.m; sourceTree = "<group>"; };
-		A51C14541D6B667200F49CAC /* BADUniversityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityClass.h; sourceTree = "<group>"; };
-		A51C14551D6B667200F49CAC /* BADUniversityClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityClass.m; sourceTree = "<group>"; };
-		A51C14561D6B667200F49CAC /* BADUniversityDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityDay.h; sourceTree = "<group>"; };
-		A51C14571D6B667200F49CAC /* BADUniversityDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityDay.m; sourceTree = "<group>"; };
-		A51C14581D6B667200F49CAC /* BADUniversitySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversitySchedule.h; sourceTree = "<group>"; };
-		A51C14591D6B667200F49CAC /* BADUniversitySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversitySchedule.m; sourceTree = "<group>"; };
-		A51C145B1D6B667200F49CAC /* BADUniversityDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityDepartment.h; sourceTree = "<group>"; };
-		A51C145C1D6B667200F49CAC /* BADUniversityDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityDepartment.m; sourceTree = "<group>"; };
-		A51C145D1D6B667200F49CAC /* BADUniversityFaculty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityFaculty.h; sourceTree = "<group>"; };
-		A51C145E1D6B667200F49CAC /* BADUniversityFaculty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityFaculty.m; sourceTree = "<group>"; };
-		A51C145F1D6B667200F49CAC /* BADUniversityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityGroup.h; sourceTree = "<group>"; };
-		A51C14601D6B667200F49CAC /* BADUniversityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityGroup.m; sourceTree = "<group>"; };
 		A549B04B1D63187C00A3D015 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "BMSTU Schedule.entitlements"; path = "BMSTU Schedule/BMSTU Schedule.entitlements"; sourceTree = "<group>"; };
 		A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BMSTU Schedule/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A59F85631D50AA5900B83824 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5A3F8D71D6C55BD002C6585 /* BADDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADDownloader.h; sourceTree = "<group>"; };
+		A5A3F8D81D6C55BD002C6585 /* BADDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADDownloader.m; sourceTree = "<group>"; };
+		A5A3F8D91D6C55BD002C6585 /* BADHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADHandler.h; sourceTree = "<group>"; };
+		A5A3F8DA1D6C55BD002C6585 /* BADHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADHandler.m; sourceTree = "<group>"; };
+		A5A3F8DB1D6C55BD002C6585 /* BADSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADSaver.h; sourceTree = "<group>"; };
+		A5A3F8DC1D6C55BD002C6585 /* BADSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADSaver.m; sourceTree = "<group>"; };
+		A5A3F8DF1D6C55BD002C6585 /* BADUniversityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityClass.h; sourceTree = "<group>"; };
+		A5A3F8E01D6C55BD002C6585 /* BADUniversityClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityClass.m; sourceTree = "<group>"; };
+		A5A3F8E11D6C55BD002C6585 /* BADUniversityDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityDay.h; sourceTree = "<group>"; };
+		A5A3F8E21D6C55BD002C6585 /* BADUniversityDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityDay.m; sourceTree = "<group>"; };
+		A5A3F8E31D6C55BD002C6585 /* BADUniversitySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversitySchedule.h; sourceTree = "<group>"; };
+		A5A3F8E41D6C55BD002C6585 /* BADUniversitySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversitySchedule.m; sourceTree = "<group>"; };
+		A5A3F8E61D6C55BD002C6585 /* BADUniversityDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityDepartment.h; sourceTree = "<group>"; };
+		A5A3F8E71D6C55BD002C6585 /* BADUniversityDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityDepartment.m; sourceTree = "<group>"; };
+		A5A3F8E81D6C55BD002C6585 /* BADUniversityFaculty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityFaculty.h; sourceTree = "<group>"; };
+		A5A3F8E91D6C55BD002C6585 /* BADUniversityFaculty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityFaculty.m; sourceTree = "<group>"; };
+		A5A3F8EA1D6C55BD002C6585 /* BADUniversityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADUniversityGroup.h; sourceTree = "<group>"; };
+		A5A3F8EB1D6C55BD002C6585 /* BADUniversityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADUniversityGroup.m; sourceTree = "<group>"; };
 		B31AB506CECF6D850877249B /* libPods-BMSTU Schedule-BMSTU ScheduleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D6ADF3F55AADC726F927E1 /* Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU Schedule-BMSTU ScheduleTests/Pods-BMSTU Schedule-BMSTU ScheduleTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBE3A7171DD43342EAD0B684 /* Pods-BMSTU ScheduleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSTU ScheduleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMSTU ScheduleUITests/Pods-BMSTU ScheduleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		68C377751C3406B3007DD412 /* BMSTU Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				A51C144A1D6B667200F49CAC /* BMSTU Library */,
+				A5A3F8D51D6C55BD002C6585 /* BMSTU Library */,
 				6856E4C21C6BD8360042E866 /* Controllers */,
 				68C377791C3406B3007DD412 /* AppDelegate.h */,
 				68C3777A1C3406B3007DD412 /* AppDelegate.m */,
@@ -264,60 +264,59 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		A51C144A1D6B667200F49CAC /* BMSTU Library */ = {
+		A5A3F8D51D6C55BD002C6585 /* BMSTU Library */ = {
 			isa = PBXGroup;
 			children = (
-				A51C144B1D6B667200F49CAC /* Managers */,
-				A51C14521D6B667200F49CAC /* Model */,
+				A5A3F8D61D6C55BD002C6585 /* Managers */,
+				A5A3F8DD1D6C55BD002C6585 /* Model */,
 			);
-			name = "BMSTU Library";
-			path = BMSTULibrary;
+			path = "BMSTU Library";
 			sourceTree = "<group>";
 		};
-		A51C144B1D6B667200F49CAC /* Managers */ = {
+		A5A3F8D61D6C55BD002C6585 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A51C144C1D6B667200F49CAC /* BADDownloader.h */,
-				A51C144D1D6B667200F49CAC /* BADDownloader.m */,
-				A51C144E1D6B667200F49CAC /* BADHandler.h */,
-				A51C144F1D6B667200F49CAC /* BADHandler.m */,
-				A51C14501D6B667200F49CAC /* BADSaver.h */,
-				A51C14511D6B667200F49CAC /* BADSaver.m */,
+				A5A3F8D71D6C55BD002C6585 /* BADDownloader.h */,
+				A5A3F8D81D6C55BD002C6585 /* BADDownloader.m */,
+				A5A3F8D91D6C55BD002C6585 /* BADHandler.h */,
+				A5A3F8DA1D6C55BD002C6585 /* BADHandler.m */,
+				A5A3F8DB1D6C55BD002C6585 /* BADSaver.h */,
+				A5A3F8DC1D6C55BD002C6585 /* BADSaver.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A51C14521D6B667200F49CAC /* Model */ = {
+		A5A3F8DD1D6C55BD002C6585 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A51C14531D6B667200F49CAC /* Schedule */,
-				A51C145A1D6B667200F49CAC /* University */,
+				A5A3F8DE1D6C55BD002C6585 /* Schedule */,
+				A5A3F8E51D6C55BD002C6585 /* University */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A51C14531D6B667200F49CAC /* Schedule */ = {
+		A5A3F8DE1D6C55BD002C6585 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				A51C14541D6B667200F49CAC /* BADUniversityClass.h */,
-				A51C14551D6B667200F49CAC /* BADUniversityClass.m */,
-				A51C14561D6B667200F49CAC /* BADUniversityDay.h */,
-				A51C14571D6B667200F49CAC /* BADUniversityDay.m */,
-				A51C14581D6B667200F49CAC /* BADUniversitySchedule.h */,
-				A51C14591D6B667200F49CAC /* BADUniversitySchedule.m */,
+				A5A3F8DF1D6C55BD002C6585 /* BADUniversityClass.h */,
+				A5A3F8E01D6C55BD002C6585 /* BADUniversityClass.m */,
+				A5A3F8E11D6C55BD002C6585 /* BADUniversityDay.h */,
+				A5A3F8E21D6C55BD002C6585 /* BADUniversityDay.m */,
+				A5A3F8E31D6C55BD002C6585 /* BADUniversitySchedule.h */,
+				A5A3F8E41D6C55BD002C6585 /* BADUniversitySchedule.m */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
 		};
-		A51C145A1D6B667200F49CAC /* University */ = {
+		A5A3F8E51D6C55BD002C6585 /* University */ = {
 			isa = PBXGroup;
 			children = (
-				A51C145B1D6B667200F49CAC /* BADUniversityDepartment.h */,
-				A51C145C1D6B667200F49CAC /* BADUniversityDepartment.m */,
-				A51C145D1D6B667200F49CAC /* BADUniversityFaculty.h */,
-				A51C145E1D6B667200F49CAC /* BADUniversityFaculty.m */,
-				A51C145F1D6B667200F49CAC /* BADUniversityGroup.h */,
-				A51C14601D6B667200F49CAC /* BADUniversityGroup.m */,
+				A5A3F8E61D6C55BD002C6585 /* BADUniversityDepartment.h */,
+				A5A3F8E71D6C55BD002C6585 /* BADUniversityDepartment.m */,
+				A5A3F8E81D6C55BD002C6585 /* BADUniversityFaculty.h */,
+				A5A3F8E91D6C55BD002C6585 /* BADUniversityFaculty.m */,
+				A5A3F8EA1D6C55BD002C6585 /* BADUniversityGroup.h */,
+				A5A3F8EB1D6C55BD002C6585 /* BADUniversityGroup.m */,
 			);
 			path = University;
 			sourceTree = "<group>";
@@ -613,22 +612,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51C14651D6B667200F49CAC /* BADUniversityDay.m in Sources */,
-				A51C14611D6B667200F49CAC /* BADDownloader.m in Sources */,
+				A5A3F8F01D6C55BD002C6585 /* BADUniversityDay.m in Sources */,
+				A5A3F8EC1D6C55BD002C6585 /* BADDownloader.m in Sources */,
 				6856E4C11C6BD82B0042E866 /* TodayViewController.m in Sources */,
-				A51C14641D6B667200F49CAC /* BADUniversityClass.m in Sources */,
+				A5A3F8EF1D6C55BD002C6585 /* BADUniversityClass.m in Sources */,
 				68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */,
-				A51C14691D6B667200F49CAC /* BADUniversityGroup.m in Sources */,
-				A51C14671D6B667200F49CAC /* BADUniversityDepartment.m in Sources */,
-				A51C14681D6B667200F49CAC /* BADUniversityFaculty.m in Sources */,
+				A5A3F8F41D6C55BD002C6585 /* BADUniversityGroup.m in Sources */,
+				A5A3F8F21D6C55BD002C6585 /* BADUniversityDepartment.m in Sources */,
+				A5A3F8F31D6C55BD002C6585 /* BADUniversityFaculty.m in Sources */,
 				68B119971C7A19C700BBBE36 /* UniversityNoClassCell.m in Sources */,
 				68C3777B1C3406B3007DD412 /* AppDelegate.m in Sources */,
 				68C3777E1C3406B3007DD412 /* WeekViewController.m in Sources */,
 				68474BC41C725FAD0079B5D8 /* SettingsViewController.m in Sources */,
-				A51C14661D6B667200F49CAC /* BADUniversitySchedule.m in Sources */,
-				A51C14621D6B667200F49CAC /* BADHandler.m in Sources */,
+				A5A3F8F11D6C55BD002C6585 /* BADUniversitySchedule.m in Sources */,
+				A5A3F8ED1D6C55BD002C6585 /* BADHandler.m in Sources */,
 				68C3791A1C342087007DD412 /* main.m in Sources */,
-				A51C14631D6B667200F49CAC /* BADSaver.m in Sources */,
+				A5A3F8EE1D6C55BD002C6585 /* BADSaver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
