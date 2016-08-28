@@ -18,6 +18,8 @@
 
 + (BADDownloader *) sharedDownloader;
 
+#pragma mark - Unknown server
+
 // General information
 
 - (void)getWeekNumberWithSuccess:(void (^)(NSInteger weekNumber))success
@@ -42,5 +44,7 @@
 - (void) getScheduleForGroup:(BADUniversityGroup *)group
                      success:(void (^)(BADUniversitySchedule *schedule))success
                      failure:(void (^)(NSError *error))failure;
+
+#pragma mark - Firebase
 
 @end

@@ -15,9 +15,7 @@
 @interface BADHandler : NSObject
 
 - (BADUniversityClass *)handleClass:(BADUniversityClass *)universityClass;
-
 - (BADUniversityDay *)handleDay:(BADUniversityDay *)day;
-
 - (BADUniversitySchedule *)handleSchedule:(BADUniversitySchedule *)schedule;
 
 @end

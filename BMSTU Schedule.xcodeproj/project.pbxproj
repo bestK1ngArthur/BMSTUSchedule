@@ -98,6 +98,7 @@
 		A549B04B1D63187C00A3D015 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "BMSTU Schedule.entitlements"; path = "BMSTU Schedule/BMSTU Schedule.entitlements"; sourceTree = "<group>"; };
 		A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BMSTU Schedule/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A56B62E71D6C77C900885794 /* BMSTULibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSTULibrary.h; sourceTree = "<group>"; };
 		A59F85631D50AA5900B83824 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5A3F8D71D6C55BD002C6585 /* BADDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADDownloader.h; sourceTree = "<group>"; };
 		A5A3F8D81D6C55BD002C6585 /* BADDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADDownloader.m; sourceTree = "<group>"; };
@@ -267,6 +268,7 @@
 		A5A3F8D51D6C55BD002C6585 /* BMSTU Library */ = {
 			isa = PBXGroup;
 			children = (
+				A56B62E71D6C77C900885794 /* BMSTULibrary.h */,
 				A5A3F8D61D6C55BD002C6585 /* Managers */,
 				A5A3F8DD1D6C55BD002C6585 /* Model */,
 			);
@@ -341,12 +343,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A31C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU Schedule" */;
 			buildPhases = (
+				BA704FEFDFE176B819DCFEF7 /* 📦 Check Pods Manifest.lock */,
 				59B0767A4CFDC841BE1D1627 /* [CP] Check Pods Manifest.lock */,
 				68C3776F1C3406B3007DD412 /* Sources */,
 				68C377701C3406B3007DD412 /* Frameworks */,
 				68C377711C3406B3007DD412 /* Resources */,
 				F9DF70E2F29E927EC1F673A8 /* [CP] Embed Pods Frameworks */,
 				07AE5C7CFB53285E61019DF9 /* [CP] Copy Pods Resources */,
+				0DA52F106167F15F756F4A18 /* 📦 Embed Pods Frameworks */,
+				DBB2213C0FD2E9F79EDDF90E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,12 +366,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A61C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleTests" */;
 			buildPhases = (
+				7AE6CAB89BD3BEF435E5921F /* 📦 Check Pods Manifest.lock */,
 				817E2A2534ECA9FFF5FE98CC /* [CP] Check Pods Manifest.lock */,
 				68C3778B1C3406B3007DD412 /* Sources */,
 				68C3778C1C3406B3007DD412 /* Frameworks */,
 				68C3778D1C3406B3007DD412 /* Resources */,
 				3D76ADCA84C027AE1DB2C4B4 /* [CP] Embed Pods Frameworks */,
 				507F628BC97CA3CE7FAC6D7E /* [CP] Copy Pods Resources */,
+				942D4569F592BF38469EB8AB /* 📦 Embed Pods Frameworks */,
+				C4CE1005431AD5A6FE07FAD5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,11 +390,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68C377A91C3406B3007DD412 /* Build configuration list for PBXNativeTarget "BMSTU ScheduleUITests" */;
 			buildPhases = (
+				028800983315F8BF819382E5 /* 📦 Check Pods Manifest.lock */,
 				CD4E1EBAFF8C0B86E5BF3B15 /* [CP] Check Pods Manifest.lock */,
 				68C377961C3406B3007DD412 /* Sources */,
 				68C377971C3406B3007DD412 /* Frameworks */,
 				68C377981C3406B3007DD412 /* Resources */,
 				0C0306950BA47D5E93A80BE5 /* [CP] Copy Pods Resources */,
+				3767882CC37C940D91B3516F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -485,6 +495,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		028800983315F8BF819382E5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		07AE5C7CFB53285E61019DF9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +533,36 @@
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU ScheduleUITests/Pods-BMSTU ScheduleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DA52F106167F15F756F4A18 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3767882CC37C940D91B3516F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +615,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		7AE6CAB89BD3BEF435E5921F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		817E2A2534ECA9FFF5FE98CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,6 +645,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		942D4569F592BF38469EB8AB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU ScheduleTests/Pods-BMSTU ScheduleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA704FEFDFE176B819DCFEF7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4CE1005431AD5A6FE07FAD5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU ScheduleTests/Pods-BMSTU ScheduleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD4E1EBAFF8C0B86E5BF3B15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,6 +703,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBB2213C0FD2E9F79EDDF90E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSTU Schedule/Pods-BMSTU Schedule-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9DF70E2F29E927EC1F673A8 /* [CP] Embed Pods Frameworks */ = {
