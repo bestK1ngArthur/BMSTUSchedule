@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, ‘8.0’
 
 target 'BMSTU Schedule' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
@@ -7,7 +7,6 @@ target 'BMSTU Schedule' do
 
   # Pods for BMSTU Schedule
   pod 'AFNetworking'
-  pod 'Firebase'
 
   target 'BMSTU ScheduleTests' do
     inherit! :search_paths

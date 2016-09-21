@@ -8,18 +8,13 @@
 
 #import "AppDelegate.h"
 
-@import Firebase;
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    [FIRApp configure];
     
     // Setting status bar
     
@@ -32,15 +27,15 @@
                                                           blue: 214 / 255.f
                                                          alpha: 1.f]];
     
+    #warning Push Notification setup here
+    
+    /*
     UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
-    #warning Push Notification aren't working
-    
-    
-    
+     */
+     
     return YES;
 }
 
@@ -71,12 +66,6 @@
     // If you are receiving a notification message while your app is in the background,
     // this callback will not be fired till the user taps on the notification launching the application.
     // TODO: Handle data of notification
-    
-    // Print message ID.
-    NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
-    
-    // Pring full message.
-    NSLog(@"%@", userInfo);
     
 }
 
