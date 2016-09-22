@@ -28,7 +28,6 @@
                                                          alpha: 1.f]];
     
     #warning Push Notification setup here
-    
     /*
     UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
@@ -65,7 +64,7 @@
     
     // If you are receiving a notification message while your app is in the background,
     // this callback will not be fired till the user taps on the notification launching the application.
-    // TODO: Handle data of notification
+    // TODO: Handle data of notificationqqqq
     
 }
 

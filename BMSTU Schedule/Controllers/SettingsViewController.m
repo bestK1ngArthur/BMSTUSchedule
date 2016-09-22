@@ -8,11 +8,7 @@
 
 #import "SettingsViewController.h"
 
-#import "BADUniversityFaculty.h"
-#import "BADUniversityDepartment.h"
-#import "BADUniversityGroup.h"
-
-#import "BADDownloader.h"
+#import "BMSTULibrary.h"
 
 typedef enum {
     GroupPickerComponentTypeFaculty    = 0,

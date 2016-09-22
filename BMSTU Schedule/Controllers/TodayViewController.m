@@ -8,19 +8,10 @@
 
 #import "TodayViewController.h"
 
+#import "BMSTULibrary.h"
+
 #import "UniversityClassCell.h"
 #import "UniversityNoClassCell.h"
-
-#import "BADUniversityGroup.h"
-#import "BADUniversityDepartment.h"
-#import "BADUniversityFaculty.h"
-
-#import "BADUniversitySchedule.h"
-#import "BADUniversityDay.h"
-#import "BADUniversityClass.h"
-
-#import "BADDownloader.h"
-#import "BADHandler.h"
 
 @interface TodayViewController ()
 

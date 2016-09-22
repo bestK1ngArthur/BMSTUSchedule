@@ -7,6 +7,7 @@ target 'BMSTU Schedule' do
 
   # Pods for BMSTU Schedule
   pod 'AFNetworking'
+  pod 'MaterialControls', '~> 1.1.0'
 
   target 'BMSTU ScheduleTests' do
     inherit! :search_paths

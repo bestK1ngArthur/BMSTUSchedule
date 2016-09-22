@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MaterialControls-MaterialControls.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MaterialControls.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BMSTU Schedule.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18C226BD878F4821CC6FE580AC58CDFC</key>
+		<key>1BBCAC0FC88ACD82130816609DC540BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>9EAF24079FA679921CD8006D4262548A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5F7914A267B3AF26CCCF5EB6DCF84AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1F47E282CC30E59A763E8A6D132505F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
