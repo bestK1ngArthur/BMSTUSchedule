@@ -24,7 +24,6 @@
 		68C66E5C1C54BFA100C318D6 /* UniversityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C66E5B1C54BFA100C318D6 /* UniversityClassCell.m */; };
 		8EAEAF590C4B0B9D0F431CBD /* libPods-BMSTU Schedule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20D5AEF24FC9F682D7C853 /* libPods-BMSTU Schedule.a */; };
 		A549B04C1D63187C00A3D015 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = A549B04B1D63187C00A3D015 /* ScreenShot.png */; };
-		A55943AD1D50DF7F00450394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */; };
 		A59A76E21D942AEE0083A6D4 /* WeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59A76E11D942AEE0083A6D4 /* WeekViewController.m */; };
 		A59F85641D50AA5900B83824 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A59F85631D50AA5900B83824 /* Podfile */; };
 		A5A3F8EC1D6C55BD002C6585 /* BADDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F8D81D6C55BD002C6585 /* BADDownloader.m */; };
@@ -95,7 +94,6 @@
 		A01D23308E3BECDFB9CD580E /* libPods-BMSTU Schedule-BMSTU ScheduleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMSTU Schedule-BMSTU ScheduleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A549B04B1D63187C00A3D015 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "BMSTU Schedule.entitlements"; path = "BMSTU Schedule/BMSTU Schedule.entitlements"; sourceTree = "<group>"; };
-		A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BMSTU Schedule/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A59A76DF1D9429D50083A6D4 /* BMSTULibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMSTULibrary.h; path = "BMSTU Schedule/BMSTU Library/BMSTULibrary.h"; sourceTree = SOURCE_ROOT; };
 		A59A76E01D942AEE0083A6D4 /* WeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekViewController.h; path = Controllers/WeekViewController.h; sourceTree = "<group>"; };
 		A59A76E11D942AEE0083A6D4 /* WeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekViewController.m; path = Controllers/WeekViewController.m; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			children = (
 				A549B04B1D63187C00A3D015 /* ScreenShot.png */,
 				A55943AB1D50DAAC00450394 /* BMSTU Schedule.entitlements */,
-				A55943AC1D50DF7F00450394 /* GoogleService-Info.plist */,
 				68C379171C342087007DD412 /* Info.plist */,
 				68C379181C342087007DD412 /* main.m */,
 			);
@@ -465,7 +462,6 @@
 				68C0CA2C1C561DBB008D81FD /* UniversityClassCell.xib in Resources */,
 				68C377841C3406B3007DD412 /* Main.storyboard in Resources */,
 				A59F85641D50AA5900B83824 /* Podfile in Resources */,
-				A55943AD1D50DF7F00450394 /* GoogleService-Info.plist in Resources */,
 				A549B04C1D63187C00A3D015 /* ScreenShot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
