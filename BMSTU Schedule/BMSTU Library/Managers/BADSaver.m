@@ -10,4 +10,6 @@
 
 @implementation BADSaver
 
+// Methods to save schedule on iPhone's disk
+
 @end

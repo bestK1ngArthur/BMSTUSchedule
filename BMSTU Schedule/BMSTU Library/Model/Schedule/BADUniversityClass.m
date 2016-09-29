@@ -59,8 +59,6 @@
     
     name = [[[name substringToIndex:1] uppercaseString] stringByAppendingString:[name substringFromIndex:1]];
     
-    //
-    
     return name;
 }
 

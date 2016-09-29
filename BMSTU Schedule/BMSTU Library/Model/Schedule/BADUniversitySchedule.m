@@ -19,14 +19,12 @@
     for (BADUniversityDay *day in self.oddWeek) {
         for (BADUniversityClass *class in day.classes) {
             [classes addObject:class];
-
         }
     }
     
     for (BADUniversityDay *day in self.evenWeek) {
         for (BADUniversityClass *class in day.classes) {
             [classes addObject:class];
-            
         }
     }
     

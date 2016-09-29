@@ -36,6 +36,8 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Setup group picker
+    
     self.courses = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
     
     [[BADDownloader sharedDownloader] getListOfFacultiesWithSuccess:^(NSArray *faculties) {
@@ -60,17 +62,10 @@ typedef enum {
         
     } failure:^(NSError *error) {
         
-        
+        // Failure to get groups
         
     }];
     
-}
-
-- (void)didReceiveMemoryWarning {
-
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -87,33 +82,25 @@ typedef enum {
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         
         if (self.faculties.count > 0) {
-            
             return self.faculties.count;
-            
         }
         
     } else if (component == GroupPickerComponentTypeDepartment) { // If department component
         
         if (self.departments.count > 0) {
-            
             return self.departments.count;
-            
         }
         
     }else if (component == GroupPickerComponentTypeCourse) { // If course component
         
         if (self.departments.count > 0) {
-            
             return self.courses.count;
-            
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If group component
         
         if (self.groups.count > 0) {
-            
             return self.groups.count;
-            
         }
         
     }
@@ -122,38 +109,31 @@ typedef enum {
 }
 
 // The data to return for the row and component (column) that's being passed in
+
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (component == GroupPickerComponentTypeFaculty) { // If faculty component
         
         if (self.faculties.count > 0) {
-            
             return [[self.faculties objectAtIndex:row] shortName];
-            
         }
         
     } else if (component == GroupPickerComponentTypeDepartment) { // If department component
         
         if (self.departments.count > 0) {
-            
             return [[self.departments objectAtIndex:row] shortName];
-            
         }
         
     } else if (component == GroupPickerComponentTypeCourse) { // If course component
         
         if (self.courses.count > 0) {
-            
             return [[NSString alloc] initWithFormat:@"%@", [self.courses objectAtIndex:row]];
-            
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If group component
         
         if (self.groups.count > 0) {
-            
             return [[NSString alloc] initWithFormat:@"%ld", (long)[[self.groups objectAtIndex:row] number]];
-            
         }
         
     }
@@ -162,6 +142,7 @@ typedef enum {
 }
 
 // Catpure the picker view selection
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     if (component == GroupPickerComponentTypeFaculty) { // If touch faculty component
@@ -169,6 +150,8 @@ typedef enum {
         if (self.faculties.count > 0) {
             
             self.selectedFaculty = [self.faculties objectAtIndex:row];
+            
+            // Load departments for faculty
             
             [[BADDownloader sharedDownloader] getListOfDepartmentsForFaculty:self.selectedFaculty
                                                                    success:^(NSArray *faculties) {
@@ -207,8 +190,10 @@ typedef enum {
                                                                        
                                                                    }
                                                                    failure:^(NSError *error) {
+                                                                      
+                                                                       // Failure to load faculties
                                                                        
-                                                                   }]; // Load departments for faculty
+                                                                   }];
             
         }
         
@@ -228,6 +213,8 @@ typedef enum {
         if (self.courses.count > 0) {
             
             self.selectedCourse = (NSInteger)[self.courses objectAtIndex:row];
+            
+            // Load groups for department
             
             [[BADDownloader sharedDownloader] getListOfGroupsForDepartment:self.selectedDepartment
                                                                     course:[[self.courses objectAtIndex:row] integerValue]
@@ -267,21 +254,30 @@ typedef enum {
                                                                  }
                                                                  failure:^(NSError *error) {
                                                                      
-                                                                 }]; // Load groups for department
+                                                                     // Failure to load groups
+                                                                     
+                                                                 }];
             
         }
         
     } else if (component == GroupPickerComponentTypeGroup) { // If touch group component
         
         if (self.groups.count > 0) {
-            
             self.selectedGroup = [self.groups objectAtIndex:row];
-            
             [[NSUserDefaults standardUserDefaults] setObject:self.selectedGroup.fullTitle forKey:@"CurrentGroup"];
-            
         }
         
     }
+    
+}
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+    
+    // Dispose of any resources that can be recreated.
     
 }
 

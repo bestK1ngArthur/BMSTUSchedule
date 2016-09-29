@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Getting week number
+    // Get week number
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
@@ -45,7 +45,7 @@
          
      }];
     
-    // Adding cells
+    // Add cells
 
     UINib *nib = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"UniversityClassCell"];
@@ -53,67 +53,10 @@
     UINib *nibNoClassCell = [UINib nibWithNibName:@"UniversityNoClassCell" bundle:nil];
     [self.tableView registerNib:nibNoClassCell forCellReuseIdentifier:@"UniversityNoClassCell"];
     
-    // Getting group
+    // Load schedule
+    [self loadScheduleData];
     
-    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
-    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
-    
-    // Getting schedule
-    
-    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
-                                                     success:^(BADUniversitySchedule *schedule) {
-                                                         
-                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                                         
-                                                         BADHandler *handler = [[BADHandler alloc] init];
-                                                         BADUniversitySchedule *currentSchedule = [handler handleSchedule:schedule];
-                                                         
-                                                         NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-                                                         NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
-                                                         NSInteger weekday = [comps weekday];
-                                                         
-                                                         if (weekday == 1) {
-                                                             weekday = 6;
-                                                         } else {
-                                                             weekday -= 2;
-                                                         }
-                                                         
-                                                         if ([currentSchedule.oddWeek count] > weekday) {
-                                                             
-                                                             if ([currentSchedule.oddWeek objectAtIndex:weekday]) {
-                                                                 
-                                                                 if (self.weekNumber == 0) {            // No week
-                                                                     
-                                                                 } else if (self.weekNumber % 2 == 0) { // Even week
-                                                                     
-                                                                     self.currentDay = [currentSchedule.evenWeek objectAtIndex:weekday];
-                                                                     
-                                                                     
-                                                                 } else {                               // Odd week
-                                                                     
-                                                                     self.currentDay = [currentSchedule.oddWeek objectAtIndex:weekday];
-                                                                     
-                                                                     
-                                                                 }
-                                                                 
-                                                                 self.navigationItem.title = self.currentDay.title;
-                                                                 
-                                                             }
-                                                             
-                                                         }
-                                                         
-                                                         [self.tableView reloadData];
-                                                         
-                                                     }
-                                                     failure:^(NSError *error) {
-                                                         
-                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                                         
-                                                         NSLog(@"Loading error!");
-                                                         
-                                                     }];
-    
-    self.tableView.tableFooterView = [[UIView alloc] init]; // Removing extra separators
+    self.tableView.tableFooterView = [[UIView alloc] init]; // Remove extra separators
     
 }
 
@@ -129,9 +72,71 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadScheduleData {
+    
+    // Get group
+    
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    // Get schedule
+    
+    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
+                                                  success:^(BADUniversitySchedule *schedule) {
+                                                      
+                                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                      
+                                                      BADHandler *handler = [[BADHandler alloc] init];
+                                                      BADUniversitySchedule *currentSchedule = [handler handleSchedule:schedule];
+                                                      
+                                                      NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+                                                      NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
+                                                      NSInteger weekday = [comps weekday];
+                                                      
+                                                      if (weekday == 1) {
+                                                          weekday = 6;
+                                                      } else {
+                                                          weekday -= 2;
+                                                      }
+                                                      
+                                                      if ([currentSchedule.oddWeek count] > weekday) {
+                                                          
+                                                          if ([currentSchedule.oddWeek objectAtIndex:weekday]) {
+                                                              
+                                                              if (self.weekNumber == 0) {
+                                                                  
+                                                                  // No week
+                                                                  
+                                                              } else if (self.weekNumber % 2 == 0) {
+                                                                  
+                                                                  // Even week
+                                                                  self.currentDay = [currentSchedule.evenWeek objectAtIndex:weekday];
+                                                                  
+                                                                  
+                                                              } else {
+                                                                  
+                                                                  // Odd week
+                                                                  self.currentDay = [currentSchedule.oddWeek objectAtIndex:weekday];
+                                                                  
+                                                              }
+                                                              
+                                                              self.navigationItem.title = self.currentDay.title;
+                                                              
+                                                          }
+                                                          
+                                                      }
+                                                      
+                                                      [self.tableView reloadData];
+                                                      
+                                                  }
+                                                  failure:^(NSError *error) {
+                                                      
+                                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                      
+                                                      // Failure to load schedule
+                                                      
+                                                  }];
+    
 }
 
 #pragma mark - UITableViewDelegate
@@ -157,7 +162,7 @@
     UITableViewRowAction *testAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Добавить" handler:^(UITableViewRowAction *testAction, NSIndexPath *indexPath){
 
         UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Уведомление"
-                                                                    message:@"Пиздец какое клёвое уведомление"
+                                                                    message:@"Пипец какое классное уведомление"
                                                                    delegate:nil
                                                           cancelButtonTitle:@"Ладненько"
                                                           otherButtonTitles:nil, nil];
@@ -179,6 +184,7 @@
 
 #pragma mark - UITableViewDataSource
 
+// Add title to days
 /*
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
@@ -237,5 +243,14 @@
     
 }
 
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+    
+    // Dispose of any resources that can be recreated.
+
+}
 
 @end

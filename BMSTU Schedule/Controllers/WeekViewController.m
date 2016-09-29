@@ -28,14 +28,13 @@
     [super viewDidLoad];
     
     // Add tabBar
-    
     /*
     MDTabBar *tabBar = [[MDTabBar alloc] initWithFrame:CGRectMake(0, 200, 320, 100)];
     [tabBar setItems:@[ @"TAB ONE", @"THE NEXT TAB" ]];
     tabBar.delegate = self;
     tabBar.selectedIndex = 1;
     [self.view addSubview:tabBar];
-        */
+     */
      
     // Get general information
     
@@ -78,6 +77,7 @@
     UINib *nibNoClassCell = [UINib nibWithNibName:@"UniversityNoClassCell" bundle:nil];
     [self.tableView registerNib:nibNoClassCell forCellReuseIdentifier:@"UniversityNoClassCell"];
     
+    // Load schedule
     [self loadScheduleDate];
     
 }
