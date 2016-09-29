@@ -37,7 +37,7 @@
     [self.view addSubview:tabBar];
      */
      
-    // Get week number
+    // Get general information
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
@@ -57,6 +57,19 @@
          
      }];
     
+    [[BADDownloader sharedDownloader]
+     getWeekTypeWithSuccess:^(NSString *weekType) {
+         
+         self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@)", self.navigationItem.title, weekType];
+         
+     }
+     failure:^(NSError *error) {
+         
+         // Error
+         
+     }];
+    
+    
     // Add cells
     
     UINib *nibClassCell = [UINib nibWithNibName:@"UniversityClassCell" bundle:nil];
@@ -65,35 +78,13 @@
     UINib *nibNoClassCell = [UINib nibWithNibName:@"UniversityNoClassCell" bundle:nil];
     [self.tableView registerNib:nibNoClassCell forCellReuseIdentifier:@"UniversityNoClassCell"];
     
-    // Get group
-    
-    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
-    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
-    
-    // Get schedule
-    
-    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
-                                                     success:^(BADUniversitySchedule *schedule) {
-                                                         
-                                                         BADHandler *handler = [[BADHandler alloc] init];
-                                                         self.currentSchedule = [handler handleSchedule:schedule];
-                                                         
-                                                         [self.tableView reloadData];
-                                                         
-                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                                                                                                  
-                                                     }
-                                                     failure:^(NSError *error) {
-                                                         
-                                                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                                         
-                                                         NSLog(@"Loading error!");
-                                                         
-                                                     }];
+    [self loadScheduleDate];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    // Check if need to update
     
     NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
     BADUniversityGroup *group = [[BADUniversityGroup alloc] initWithString:fullTitle];
@@ -103,14 +94,37 @@
         [self viewDidLoad];
         
     }
+    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)loadScheduleDate {
     
-    [super didReceiveMemoryWarning];
+    // Get group
     
-    // Dispose of any resources that can be recreated.
-
+    NSString *fullTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentGroup"];
+    self.currentGroup = [[BADUniversityGroup alloc] initWithString:fullTitle];
+    
+    // Get schedule
+    
+    [[BADDownloader sharedDownloader] getScheduleForGroup:self.currentGroup
+                                                  success:^(BADUniversitySchedule *schedule) {
+                                                      
+                                                      BADHandler *handler = [[BADHandler alloc] init];
+                                                      self.currentSchedule = [handler handleSchedule:schedule];
+                                                      
+                                                      [self.tableView reloadData];
+                                                      
+                                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                      
+                                                  }
+                                                  failure:^(NSError *error) {
+                                                      
+                                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                      
+                                                      NSLog(@"Loading error!");
+                                                      
+                                                  }];
+    
 }
 
 #pragma mark - UITableViewDelegate
@@ -119,17 +133,21 @@
     
     BADUniversityClass *class;
     
-    if (self.weekNumber == 0) {            // No week
+    if (self.weekNumber == 0) {
+        
+        // No week
         
         return 0;
         
-    } else if (self.weekNumber % 2 == 0) { // Even week
+    } else if (self.weekNumber % 2 == 0) {
+        
+        // Even week
         
         if ([[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] count] == 0) {
             
             //UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
             
-            return 200;//CGRectGetHeight(cell.frame);
+            return 200; //CGRectGetHeight(cell.frame);
             
         } else {
             
@@ -139,10 +157,13 @@
             
         }
         
-    } else {                               // Odd week
+    } else {
+        
+        // Odd week
         
         if ([[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] count] == 0) {
             
+            // WTF??
             //UniversityNoClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityNoClassCell" forIndexPath:indexPath];
             
             return 200;//CGRectGetHeight(cell.frame);
@@ -164,11 +185,15 @@
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    if (self.weekNumber == 0) {            // No week
+    if (self.weekNumber == 0) {
+        
+        // No week
         
         return @"";
         
-    } else if (self.weekNumber % 2 == 0) { // Even week
+    } else if (self.weekNumber % 2 == 0) {
+        
+        // Even week
         
         if ([[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count] == 0) {
             return [[self.currentSchedule.evenWeek objectAtIndex:section] title];
@@ -176,7 +201,9 @@
             return [[self.currentSchedule.evenWeek objectAtIndex:section] title];
         }
         
-    } else {                               // Odd week
+    } else {
+        
+        // Odd week
         
         if ([[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count] == 0) {
             return [[self.currentSchedule.oddWeek objectAtIndex:section] title];
@@ -189,15 +216,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    if (self.weekNumber == 0) {            // No week
+    if (self.weekNumber == 0) {
+        
+        // No week
         
         return 0;
         
-    } else if (self.weekNumber % 2 == 0) { // Even week
+    } else if (self.weekNumber % 2 == 0) {
+        
+        // Even week
         
         return [self.currentSchedule.evenWeek count];
         
-    } else {                               // Odd week
+    } else {
+        
+        // Odd week
         
         return [self.currentSchedule.oddWeek count];
         
@@ -207,11 +240,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (self.weekNumber == 0) {            // No week
+    if (self.weekNumber == 0) {
+        
+        // No week
         
         return 0;
         
-    } else if (self.weekNumber % 2 == 0) { // Even week
+    } else if (self.weekNumber % 2 == 0) {
+        
+        // Even week
         
         if ([[[self.currentSchedule.evenWeek objectAtIndex:section] classes] count] == 0) {
             return 1;
@@ -220,7 +257,9 @@
         }
         
         
-    } else {                               // Odd week
+    } else {
+        
+        // Odd week
         
         if ([[[self.currentSchedule.oddWeek objectAtIndex:section] classes] count] == 0) {
             return 1;
@@ -234,11 +273,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.weekNumber == 0) {            // No week
+    if (self.weekNumber == 0) {
+        
+        // No week
         
         return nil;
         
-    } else if (self.weekNumber % 2 == 0) { // Even week
+    } else if (self.weekNumber % 2 == 0) {
+        
+        // Even week
         
         if ([[[self.currentSchedule.evenWeek objectAtIndex:indexPath.section] classes] count] == 0) {
             
@@ -264,7 +307,9 @@
             
         }
         
-    } else {                               // Odd week
+    } else {
+        
+        // Odd week
         
         if ([[[self.currentSchedule.oddWeek objectAtIndex:indexPath.section] classes] count] == 0) {
             
@@ -291,6 +336,16 @@
         }
         
     }
+    
+}
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+    
+    // Dispose of any resources that can be recreated.
     
 }
 

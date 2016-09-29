@@ -90,7 +90,7 @@
                      }
                      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                          
-                         NSLog(@"Error(getWekNumber): %@", error);
+                         NSLog(@"Error(getWeekNumber): %@", error);
                          
                          if (failure) {
                              failure(error);
@@ -98,6 +98,41 @@
                          
                      }];
 
+}
+
+- (void)getWeekTypeWithSuccess:(void (^)(NSString *weekType))success
+                       failure:(void (^)(NSError *error))failure {
+    
+    AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    [self.sessionManager setResponseSerializer:responseSerializer];
+    
+    [self.sessionManager GET:@"semester/get/now/weeknumber"
+                  parameters:nil
+                    progress:^(NSProgress * _Nonnull downloadProgress) {}
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         
+                         NSInteger weekNumber = [responseObject integerValue];
+                         NSString *weekType = @"числитель";
+                         
+                         if (weekNumber % 2 == 0) {
+                             weekType = @"знаменатель";
+                         }
+                         
+                         if (success) {
+                             success(weekType);
+                         }
+                         
+                     }
+                     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
+                         NSLog(@"Error(getWeekType): %@", error);
+                         
+                         if (failure) {
+                             failure(error);
+                         }
+                         
+                     }];
+    
 }
 
 #pragma mark - University structure

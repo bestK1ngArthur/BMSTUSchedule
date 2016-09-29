@@ -23,6 +23,9 @@
 - (void)getWeekNumberWithSuccess:(void (^)(NSInteger weekNumber))success
                          failure:(void (^)(NSError *error))failure;
 
+- (void)getWeekTypeWithSuccess:(void (^)(NSString *weekType))success
+                       failure:(void (^)(NSError *error))failure;
+
 // University structure
 
 - (void)getListOfFacultiesWithSuccess:(void (^)(NSArray *faculties))success
