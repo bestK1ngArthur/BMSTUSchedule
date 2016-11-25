@@ -1,6 +1,9 @@
 # BMSTUSchedule
+![](https://img.shields.io/badge/platform-iOS-lightgray.svg?style=flat)
 
 iOS приложение с расписанием занятий студентов в "Бауманке"
+
+**Проект переехал в другой [репозиторий](https://github.com/BMSTUScheduleTeam/BMSTUSchedule)!**
 
 ![ScreenShot](https://raw.githubusercontent.com/bestK1ngArthur/BMSTUSchedule/master/ScreenShot.png)
 
@@ -8,7 +11,7 @@ iOS приложение с расписанием занятий студент
 
 Изменился основной сайт электронного университета. В итоге поломались все парсеры. Проект будет заморожен (oO), пока не замутим новый парсер или не придумаем что-нибудь поинтереснее.
 
-**Проект переехал в другой [репозиторий](https://github.com/BMSTUScheduleTeam/BMSTUSchedule)**
+**Проект переехал в другой [репозиторий](https://github.com/BMSTUScheduleTeam/BMSTUSchedule)!**
 
 ## #TODO
 
